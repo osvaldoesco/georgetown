@@ -40,7 +40,7 @@ return [
     */
 
     'debug' => env('APP_DEBUG', true),
-
+    'key' => env('APP_KEY', 'georgetown'),
     /*
     |--------------------------------------------------------------------------
     | Application URL
