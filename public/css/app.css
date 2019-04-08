@@ -16450,9 +16450,49 @@ header {
   padding: 5px 0px;
 }
 
+.navbar-toggler {
+  border-color: transparent !important;
+  margin-right: 15px;
+}
+
+.navbar-toggler:focus {
+  border-color: transparent !important;
+  outline: 0px !important;
+}
+
 @media screen and (min-width: 992px) {
   #app-header {
     padding-right: 0px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #app-header {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-brand {
+    margin: 6px 15px 6px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header-col {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-nav {
+    background-color: #f2f2f2;
+    padding: 15px;
+  }
+
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 8px 0px;
   }
 }
 
@@ -16484,6 +16524,13 @@ header {
   color: blue;
 }
 
+@media screen and (max-width: 991px) {
+  .gray-part {
+    margin-top: 20px;
+    padding-left: 0px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   #navbarNavAltMarkup {
     display: inline-block !important;
@@ -16509,6 +16556,12 @@ footer {
   border-top: 4px solid #49dfc7;
 }
 
+@media screen and (max-width: 991px) {
+  footer {
+    padding: 25px 0px;
+  }
+}
+
 .footer-decoration {
   width: 100%;
   max-height: 200px;
@@ -16523,9 +16576,22 @@ footer {
   width: 160px;
 }
 
+@media screen and (max-width: 991px) {
+  #footer__logo {
+    margin: 0px 0px 40px;
+  }
+}
+
 .footer__social {
   list-style: none;
   float: right;
+}
+
+@media screen and (max-width: 991px) {
+  .footer__social {
+    margin-top: -70px;
+    margin-right: -15px;
+  }
 }
 
 .social-item {
@@ -16569,6 +16635,34 @@ footer {
   font-weight: bold;
 }
 
+@media screen and (max-width: 991px) {
+  .footer__menu {
+    display: block;
+    padding-bottom: 0px;
+    max-width: 350px;
+  }
+
+  .footer__menu div {
+    width: 50%;
+    padding: 5px 0px;
+    text-align: center;
+    float: left;
+  }
+}
+
+.div-clear-mb {
+  clear: both;
+  float: none !important;
+  padding: 0px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 992px) {
+  .div-clear-mb {
+    display: none;
+  }
+}
+
 .footer__address {
   margin-top: 15px;
   color: #808080;
@@ -16579,6 +16673,15 @@ footer {
   display: block;
   color: #476fb3;
   font-size: 15px;
+}
+
+@media screen and (max-width: 991px) {
+  .footer__address {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 180px;
+    padding: 20px 0px;
+  }
 }
 
 .home__slider {

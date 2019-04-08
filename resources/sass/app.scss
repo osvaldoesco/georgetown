@@ -51,11 +51,48 @@ header {
   padding: 5px 0px;
 }
 
+.navbar-toggler{
+  border-color: transparent !important;
+  margin-right: 15px;
+  &:focus{
+    border-color: transparent !important;
+    outline: 0px !important;
+  }
+}
+
 #app-header{
   @media screen and (min-width: 992px){
     padding-right: 0px !important;
   }
+  @media screen and (max-width: 991px){
+    padding: 0px;
+  }
+
 }
+
+.navbar-brand{
+  @media screen and (max-width: 991px){
+    margin: 6px 15px 6px;
+  }
+}
+
+.header-col{
+  @media screen and (max-width: 991px){
+    padding: 0px;
+  }
+}
+
+.navbar-nav{
+  @media screen and (max-width: 991px){
+    background-color: #f2f2f2;
+    padding: 15px;
+    .nav-item{
+      border-bottom: 1px solid #e6e6e6;
+      padding: 8px 0px;
+    }
+  }
+}
+
 
 .login-link{
   display: inline-flex;
@@ -79,6 +116,10 @@ header {
   label{
     margin-bottom: 0px;
     color: blue;
+  }
+  @media screen and (max-width: 991px){
+    margin-top: 20px;
+    padding-left: 0px;
   }
 }
 
@@ -104,6 +145,10 @@ footer {
   padding: 50px 0px;
   background-color: $light-gray;
   border-top: 4px solid $green;
+  @media screen and (max-width: 991px){
+    padding: 25px 0px;
+  }
+
 }
 
 .footer-decoration{
@@ -117,11 +162,18 @@ footer {
 
 #footer__logo {
   width: 160px;
+  @media screen and (max-width: 991px){
+    margin: 0px 0px 40px;
+  }
 }
 
 .footer__social{
   list-style: none;
   float: right;
+  @media screen and (max-width: 991px){
+    margin-top: -70px;
+    margin-right: -15px;
+  }
 }
 .social-item{
   width: 45px;
@@ -150,6 +202,27 @@ footer {
     color: $light-black;
     font-weight: bold;
   }
+  @media screen and (max-width: 991px){
+    display: block;
+    padding-bottom: 0px;
+    max-width: 350px;
+    div{
+      width: 50%;
+      padding: 5px 0px;
+      text-align: center;
+      float: left;
+    }
+  }
+}
+
+.div-clear-mb{
+  clear: both;
+  float: none !important;
+  padding: 0px;
+  margin: 0px;
+  @media screen and (min-width: 992px){
+    display: none;
+  }
 }
 
 .footer__address{
@@ -161,7 +234,14 @@ footer {
     color: $blue;
     font-size: 15px;
   }
+  @media screen and (max-width: 991px){
+    margin: 0 auto;
+    width: 100%;
+    max-width: 180px;
+    padding: 20px 0px;;
+  }
 }
+
 
 //Home
 .home__slider{

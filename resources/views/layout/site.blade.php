@@ -13,7 +13,7 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 header-col">
             <nav class="navbar navbar-light navbar-expand-lg" id="app-header">
               <a class="navbar-brand"><img alt="logo" id="header__logo" src="{{ asset('img/logo-header.png')}}" /></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
                         <img alt="login" src="{{asset('img/login.png')}}">
                         <label>Login Estudiantes </label>
                       </div>
-                      <i class="fas fa-arrow-right"></i>
+                      <i class="fas fa-arrow-right visible-desktop"></i>
                     </div>
                   </a>
                 </div>
@@ -62,6 +62,7 @@
               <div><a href="#">Nuestros servicios</a></div>
               <div><a href="#">Noticias</a></div>
               <div><a href="#"class="active">Contáctanos</a></div>
+              <div class="div-clear-mb"></div>
             </div>
             <p class="footer__address">
               Centro comercial loma linda local D #31, <b>San Salvador</b>
