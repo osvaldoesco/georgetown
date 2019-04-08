@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'GeorgeTown'),
 
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +40,6 @@ return [
     */
 
     'debug' => env('APP_DEBUG', true),
-    'key' => env('APP_KEY', 'georgetown'),
     /*
     |--------------------------------------------------------------------------
     | Application URL
