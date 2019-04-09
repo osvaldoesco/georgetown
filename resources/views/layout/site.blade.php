@@ -54,7 +54,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-2 text-center text-lg-left">
-            <img alt="logo" id="footer__logo" src="{{ asset('img/logo-footer.png')}}" />
+            <img alt="logo" id="footer__logo" src="{{ asset('img/logo-footer.jpg')}}" />
           </div>
           <div class="col-12 col-lg-8 text-center">
             <div class="footer__menu">
