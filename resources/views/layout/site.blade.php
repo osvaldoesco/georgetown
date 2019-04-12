@@ -42,14 +42,15 @@
         </div>
       </div>
     </header>
-    <div class="content">
+    <div class="content decoration-page">
+      <img alt="decoration" class="footer-decoration visible-desktop" src="{{ asset('img/footer-decoration.png') }}">
+      <img
+        alt="decoration-mobile"
+        class="footer-decoration-mb visible-mobile"
+        src="{{ asset('img/footer-decoration-mb.png') }}">
       @yield('content')
     </div>
-    <img alt="decoration" class="footer-decoration visible-desktop" src="{{ asset('img/footer-decoration.png') }}">
-    <img
-      alt="decoration-mobile"
-      class="footer-decoration-mb visible-mobile"
-      src="{{ asset('img/footer-decoration-mb.png') }}">
+
     <footer>
       <div class="container">
         <div class="row">
