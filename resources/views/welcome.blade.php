@@ -10,7 +10,7 @@
       </h3>
       <div class="container padding-vertical">
           <div class="row">
-            <div class="col-12 col-md-6 col-lg-3 square col-p-10">
+            <div class="col-12 col-md-6 col-lg-3 square col-p-10 services-cont">
               <div class="services-block">
                 <h4 class="box-title">
                   CURSOS PARA 
@@ -26,7 +26,7 @@
                 <i class="fas fa-arrow-right"></i>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3 square col-p-10">
+            <div class="col-12 col-md-6 col-lg-3 square col-p-10 services-cont">
               <div class="services-block--green">
                 <h4 class="box-title">
                   CURSOS PARA 
@@ -42,7 +42,7 @@
                 <i class="fas fa-arrow-right"></i>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3 square col-p-10">
+            <div class="col-12 col-md-6 col-lg-3 square col-p-10 services-cont">
               <div class="services-block--gray">
                 <h4 class="box-title">
                   CURSOS PARA 
@@ -58,7 +58,7 @@
                 <i class="fas fa-arrow-right"></i>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3 square col-p-10">
+            <div class="col-12 col-md-6 col-lg-3 square col-p-10 services-cont">
               <div class="services-block--yellow">
                 <h4 class="box-title">
                   CURSOS PARA 

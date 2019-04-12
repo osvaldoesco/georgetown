@@ -16685,7 +16685,8 @@ footer {
 }
 
 .home__slider {
-  padding: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: #476fb3;
   text-align: center;
   color: white;
@@ -16700,13 +16701,15 @@ footer {
 }
 
 .home__services {
-  padding: 100px 0px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: #f9f9f9;
   text-align: center;
 }
 
 .home__students {
-  padding: 100px 0px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: #e6e6e6;
   text-align: center;
   font-size: 20px;
@@ -16725,6 +16728,15 @@ footer {
   padding-bottom: 10px;
 }
 
+@media screen and (max-width: 991px) {
+  .decoration,
+  .title-decorated:after,
+  .title-decorated:before {
+    width: 45px;
+    height: 12px;
+  }
+}
+
 .title,
 .title-decorated {
   font-size: 23px;
@@ -16739,6 +16751,13 @@ footer {
   font-style: italic;
 }
 
+@media screen and (max-width: 991px) {
+  .title,
+  .title-decorated {
+    font-size: 20px;
+  }
+}
+
 .title-decorated:before {
   padding-right: 15px;
 }
@@ -16748,7 +16767,8 @@ footer {
 }
 
 .padding-vertical {
-  padding: 50px 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .padding-top {
@@ -16757,10 +16777,6 @@ footer {
 
 .padding-bottom {
   padding-bottom: 50px;
-}
-
-.col-p-10 {
-  padding: 0px 7px;
 }
 
 .img-md {
@@ -16800,6 +16816,10 @@ footer {
 
 .site-button:hover i {
   color: #fff;
+}
+
+.services-cont {
+  margin-top: 15px;
 }
 
 .services-block,
