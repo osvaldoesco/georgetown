@@ -67,7 +67,7 @@
             </div>
             <p class="footer__address">
               Centro comercial loma linda local D #31, <b>San Salvador</b>
-              <span> +(503) 7851 - 7268 </span>
+              <span> +(503) 2231 -1790 / 7680 - 5577</span>
             </p>
           </div>
           <div class="col-12 col-lg-2 text-right">
