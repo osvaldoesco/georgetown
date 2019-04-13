@@ -66,7 +66,7 @@
               <div class="div-clear-mb"></div>
             </div>
             <p class="footer__address">
-              Centro comercial loma linda local D #31, <b>San Salvador</b>
+              Centro comercial loma linda local #31D, <b>San Salvador</b>
               <span> +(503) 2231 -1790 / 7680 - 5577</span>
             </p>
           </div>
@@ -83,7 +83,7 @@
                 </a>
               </li>
               <li class="social-item social-mail">
-                <a href="mailto:ceo@georgetownenglish.com" >
+                <a href="mailto:info@GeorgeTownENGLISH.com" >
                   <img alt="mail" src="{{ asset('img/mail.png')}}" />
                 </a>
               </li>
