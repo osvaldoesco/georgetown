@@ -17,6 +17,26 @@
             <p class="text-schedule title-margin">1:30 a.m - 11:20 a.m</p>
             <p class="text-schedule title-margin">12:00 m.d - 04:00 p.m</p>
           </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <div class="disting">
+              <img alt="decoration" class="right-decoration" src="{{ asset('img/schedules_right.png') }}" />
+                <p>
+                  Lo que distingue a Georgetown English Academy no es sólo su 
+                  incomparable calidad y métodos  de enseñanza, materiales de 
+                  estudio y servicio de asesoría, sino una verdadera dedicación 
+                  a las necesidades individuales y una búsqueda interminable de 
+                  la excelencia para sus clientes. 
+                </p>
+                <div class="btn-cont">
+                  <button class="site-button">
+                    Contáctenos
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -16726,7 +16726,7 @@ header {
   border-top: 5px solid #cccccc;
   background-color: white;
   padding: 5px 0px;
-  box-shadow: 10px 2px 10px #808080;
+  box-shadow: 8px 8px 10px #808080;
 }
 
 .navbar-toggler {
@@ -17307,7 +17307,7 @@ footer {
   padding-bottom: 250px;
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 992px) {
   .content section:last-child {
     padding-bottom: 200px;
   }
@@ -17336,7 +17336,7 @@ footer {
   background-size: 100% 60%;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 40px 0px;
+  padding: 40px 0px 0px;
 }
 
 .schedules__header img {
@@ -17369,5 +17369,55 @@ footer {
 
 .title-margin {
   margin: 10px 0px;
+}
+
+.disting {
+  background-color: #f9f9f9;
+  padding: 30px 20px;
+  border-left: 4px solid #49dfc7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.disting p {
+  width: 67%;
+  text-align: left;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 0px;
+}
+
+.disting .btn-cont {
+  width: 30%;
+  text-align: center;
+}
+
+.disting .right-decoration {
+  position: absolute;
+  height: 100%;
+  right: 0px;
+}
+
+@media screen and (max-width: 991px) {
+  .disting {
+    display: block;
+  }
+
+  .disting p {
+    width: 100%;
+  }
+
+  .disting .btn-cont {
+    width: 100%;
+    padding: 30px 0px 10px;
+  }
+
+  .disting .right-decoration {
+    bottom: 0px;
+    height: 100px;
+  }
 }
 

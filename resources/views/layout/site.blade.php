@@ -62,7 +62,7 @@
               <div><a href="#">¿Quienes somos?</a></div>
               <div><a href="#">Nuestros servicios</a></div>
               <div><a href="#">Noticias</a></div>
-              <div><a href="#"class="active">Contáctanos</a></div>
+              <div><a href="#">Contáctanos</a></div>
               <div class="div-clear-mb"></div>
             </div>
             <p class="footer__address">
@@ -73,13 +73,19 @@
           <div class="col-12 col-lg-2 text-right">
             <ul class="footer__social">
               <li class="social-item social-insta">
-                <a href="" ><img alt="insta" src="{{ asset('img/insta.png')}}" /></a>
+                <a href="https://www.instagram.com/georgetown.english/?hl=es-la" >
+                  <img alt="insta" src="{{ asset('img/insta.png')}}" />
+                </a>
               </li>
               <li class="social-item social-fb">
-                <a href="" ><img alt="fb" src="{{ asset('img/fb.png')}}" /></a>
+                <a href="https://www.facebook.com/Georgetown-English-Academy-351189995515981/" >
+                  <img alt="fb" src="{{ asset('img/fb.png')}}" />
+                </a>
               </li>
               <li class="social-item social-mail">
-                <a href="" ><img alt="mail" src="{{ asset('img/mail.png')}}" /></a>
+                <a href="mailto:ceo@georgetownenglish.com" >
+                  <img alt="mail" src="{{ asset('img/mail.png')}}" />
+                </a>
               </li>
             <ul>
           </div>
