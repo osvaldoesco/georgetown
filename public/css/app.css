@@ -16726,6 +16726,7 @@ header {
   border-top: 5px solid #cccccc;
   background-color: white;
   padding: 5px 0px;
+  box-shadow: 10px 2px 10px #808080;
 }
 
 .navbar-toggler {
@@ -17126,7 +17127,7 @@ footer {
   border-radius: 17px;
   border-style: none;
   border: 0px;
-  box-shadow: 3px 3px 15px #f9f9f9;
+  box-shadow: 3px 3px 15px #cccccc;
 }
 
 .site-button i {
@@ -17156,6 +17157,7 @@ footer {
   height: 100%;
   text-align: left;
   padding: 25px 15px;
+  box-shadow: 1px 1px 10px #cccccc;
 }
 
 .services-block h4,
@@ -17212,7 +17214,7 @@ footer {
 }
 
 .events-box {
-  box-shadow: 1px 1px 10px #ccc;
+  box-shadow: 1px 1px 10px #cccccc;
 }
 
 .events-box img {
@@ -17281,10 +17283,6 @@ footer {
   text-align: center;
 }
 
-.slider-events {
-  box-shadow: 1px 1px 10px #ccc;
-}
-
 .slider-events img {
   width: 100%;
 }
@@ -17309,6 +17307,12 @@ footer {
   padding-bottom: 250px;
 }
 
+@media screen and (min-width: 991px) {
+  .content section:last-child {
+    padding-bottom: 200px;
+  }
+}
+
 .slick-dots li {
   padding: 5px 0px !important;
   margin: 0px;
@@ -17321,5 +17325,49 @@ footer {
 .slick-dots li button:before {
   font-size: 8px;
   color: #666666;
+}
+
+.schedules__header-cont {
+  background-color: #e6e6e6;
+}
+
+.schedules__header {
+  background-image: url("/img/schedules_bg.png");
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.schedules__header img {
+  max-width: 200px;
+  margin-top: 30px;
+}
+
+.schedules__info {
+  padding: 40px 0px 20px;
+}
+
+.title-blue {
+  text-transform: uppercase;
+  color: #476fb3;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title-gray {
+  text-transform: uppercase;
+  color: #808080;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.text-schedule {
+  font-size: 16px;
+  color: #808080;
+}
+
+.title-margin {
+  margin: 10px 0px;
 }
 

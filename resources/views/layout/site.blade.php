@@ -15,17 +15,17 @@
         <div class="row">
           <div class="col-12 header-col">
             <nav class="navbar navbar-light navbar-expand-lg" id="app-header">
-              <a class="navbar-brand"><img alt="logo" id="header__logo" src="{{ asset('img/logo-header.png')}}" /></a>
+              <a class="navbar-brand" href="/"><img alt="logo" id="header__logo" src="{{ asset('img/logo-header.png')}}" /></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-item nav-link" href="#">¿Quiénes Somos?</a>
-                  <a class="nav-item nav-link" href="#">Horarios</a>
-                  <a class="nav-item nav-link" href="#">Cursos</a>
-                  <a class="nav-item nav-link" href="#">Blog</a>
-                  <a class="nav-item nav-link active" href="#">Contáctenos</a>
+                  <a class="nav-item nav-link {{ $page == 'about_us' ? 'active' : ''}}" href="{{ route('pages.about_us') }}">¿Quiénes Somos?</a>
+                  <a class="nav-item nav-link {{ $page == 'schedules' ? 'active' : ''}}" href="{{ route('pages.schedules') }}">Horarios</a>
+                  <a class="nav-item nav-link {{ $page == 'courses' ? 'active' : ''}}" href="{{ route('pages.courses') }}">Cursos</a>
+                  <a class="nav-item nav-link" href="">Blog</a>
+                <a class="nav-item nav-link {{ $page == 'contact' ? 'active' : ''}}" href="{{ route('pages.contact') }}">Contáctenos</a>
                   <a class="" href="#">
                     <div class="login-link">
                       <div class="gray-part">

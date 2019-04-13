@@ -1,4 +1,4 @@
-@extends('layout.site')
+@extends('layout.site', ['page' => ''])
 
 @section('content')
   <div class="home__slider visible-desktop">
@@ -139,6 +139,5 @@
       Ir al login estudiantil 
       <i class="fas fa-arrow-right"></i>
     </button>
-  </div>
-
+  </section>
 @endsection
