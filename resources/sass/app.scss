@@ -14,17 +14,18 @@
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
-
+@import '../plugins/slick/slick.scss';
+@import '../plugins/slick/slick-theme.scss';
 
 .visible-desktop{
-  display: none;
+  display: none !important;
   @media screen and (min-width: 992px){
-    display: block;
+    display: block !important; 
   }
 }
 .visible-mobile{
   @media screen and (min-width: 992px){
-    display: none;
+    display: none !important;
   }
 }
 
@@ -180,12 +181,13 @@ footer {
   }
 }
 .social-item{
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   text-align: center;
-  line-height: 45px;
+  line-height: 40px;
   img{
-     vertical-align: middle;
+    vertical-align: middle;
+    height: 22px;
   }
 }
 .social-insta{ background-color: $blue; }
@@ -246,15 +248,16 @@ footer {
   }
 }
 
-
 //Home
 .home__slider{
-  background-color: #f2f2f2;
   text-align: center;
   color: white;
-  font-size: 20px;
+  width: 100%;
   img{
-    width: 100%;
+    width: 100% !important;
+  }
+  .slick-prev, .slick-next{
+    display: none !important;
   }
 }
 
@@ -266,6 +269,9 @@ footer {
   img{
     width: 100%;
   }
+  .slick-prev, .slick-next{
+    display: none !important;
+  }
   @media screen and (min-width: 550px){
     width: 500px;
     margin: 0 auto;
@@ -274,7 +280,7 @@ footer {
 
 .home__events{
   padding: 60px 0px;
-  background-color: #e6e6e6;
+  background-color: #f2f0f2;
   text-align: center;
   font-size: 20px;
 }
@@ -284,6 +290,9 @@ footer {
   padding-bottom: 60px;
   background-color: $light-gray;
   text-align: center;
+  @media screen and (max-width: 991px){
+    padding-top: 30px;
+  }
 }
 
 .home__students{
@@ -452,7 +461,7 @@ footer {
   @media screen and (max-width: 991px){
     margin-bottom: 20px !important;
   }
-  @media screen and (min-width: 550px){
+  @media screen and (min-width: 550px) and (max-width: 991px){
     width: 500px;
     margin: 0 auto;
   }
@@ -463,6 +472,7 @@ footer {
   text-align: left;
   padding: 22px 10px 15px;
   border-top: 3px solid $green;
+
   h4{
     font-size: 16px;
     color: $green;
@@ -492,11 +502,16 @@ footer {
 
 
 .button-cont{
-  padding: 40px 0px 0px;
+  padding: 30px 0px 0px;
   text-align: center;
   @media screen and (max-width: 991px){
     padding: 10px 0px 0px;
   }
+}
+
+.button-cont-less{
+  padding: 10px 0px 0px;
+  text-align: center;
 }
 
 .slider-events{
@@ -504,9 +519,12 @@ footer {
   img{
     width: 100%;
   }
-  @media screen and (min-width: 550px){
+  @media screen and (min-width: 550px) and (max-width: 991px){
     width: 500px;
     margin: 0 auto;
+  }
+  .slick-prev, .slick-next{
+    display: none !important;
   }
 }
 
@@ -514,5 +532,19 @@ footer {
   position: relative;
   section:last-child{
     padding-bottom: 250px;
+  }
+}
+
+.slick-dots{
+  li{
+    padding: 5px 0px !important;
+    margin: 0px;
+    button{
+      padding: 0px 3px !important;
+      &:before{
+        font-size: 8px;
+        color: #666666;
+      }
+    }
   }
 }

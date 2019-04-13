@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('../plugins/slick/slick.js');
 
 window.Vue = require('vue');
 
@@ -30,4 +31,37 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app'
+});
+
+$('.home__slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    slidesToScroll: 1
+});
+
+$('.home__slider-mobile').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    slidesToScroll: 1
+});
+
+$('.slider-events').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    slidesToScroll: 1
 });

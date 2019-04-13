@@ -2,11 +2,13 @@
 
 @section('content')
   <div class="home__slider visible-desktop">
-    <img alt="slider" src="{{ asset('img/fake/slider1.jpg')}}" />
+    <div><img alt="slider" src="{{ asset('img/fake/slider1.jpg')}}" /></div>
+    <div><img alt="slider" src="{{ asset('img/fake/fake-slider.png')}}" /></div>
   </div>
   <div class="home__slider-mobile visible-mobile">
-      <img alt="slider" src="{{ asset('img/fake/slider1-mobile.jpg')}}" />
-    </div>
+     <div><img alt="slider-mobile" src="{{ asset('img/fake/slider1-mobile.jpg')}}" /></div>
+     <div><img alt="slider-mobile-fake" src="{{ asset('img/fake/fake-mobile.png')}}" /></div>
+  </div>
   <div class="home__services">
       <h3 class="title-decorated">
         NUESTROS <span>SERVICIOS</span>
@@ -88,7 +90,7 @@
     <h3 class="title-decorated">
       EVENTOS <span>Y NOTICIAS</span>
     </h3>
-    <div class="container padding-vertical">
+    <div class="container padding-top">
       <div class="row">
         <div class="col-12 col-lg-4">
           <div class="events-box">
@@ -113,12 +115,13 @@
         </div>
         <div class="col-12 col-lg-4">
           <div class="slider-events">
-            <img alt="slider" src="{{ asset('img/fake/slider-events.jpg')}}" />
+              <div><img alt="slider" src="{{ asset('img/fake/slider-events.jpg')}}" /></div>
+              <div><img alt="slider2" src="{{ asset('img/fake/fake-slider-events.png')}}" /></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="button-cont">
+    <div class="button-cont-less">
       <button class="site-button">
         Vea nuestra metodología
         <i class="fas fa-arrow-right"></i>
