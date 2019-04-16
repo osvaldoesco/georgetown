@@ -24,8 +24,8 @@
                   <a class="nav-item nav-link {{ $page == 'about_us' ? 'active' : ''}}" href="{{ route('pages.about_us') }}">¿Quiénes Somos?</a>
                   <a class="nav-item nav-link {{ $page == 'schedules' ? 'active' : ''}}" href="{{ route('pages.schedules') }}">Horarios</a>
                   <a class="nav-item nav-link {{ $page == 'courses' ? 'active' : ''}}" href="{{ route('pages.courses') }}">Cursos</a>
-                  <a class="nav-item nav-link" href="">Blog</a>
-                <a class="nav-item nav-link {{ $page == 'contact' ? 'active' : ''}}" href="{{ route('pages.contact') }}">Contáctenos</a>
+                  <a class="nav-item nav-link {{ $page == 'events' ? 'active' : ''}}" href="{{ route('pages.events') }}">Eventos y noticias</a>
+                  <a class="nav-item nav-link {{ $page == 'contact' ? 'active' : ''}}" href="{{ route('pages.contact') }}">Contáctenos</a>
                   <a class="" href="#">
                     <div class="login-link">
                       <div class="gray-part">
@@ -59,10 +59,10 @@
           </div>
           <div class="col-12 col-lg-8 text-center">
             <div class="footer__menu">
-              <div><a href="#">¿Quienes somos?</a></div>
-              <div><a href="#">Nuestros servicios</a></div>
-              <div><a href="#">Noticias</a></div>
-              <div><a href="#">Contáctanos</a></div>
+              <div><a href="{{ route('pages.about_us') }}">¿Quienes somos?</a></div>
+              <div><a href="{{ route('pages.services') }}">Nuestros servicios</a></div>
+            <div><a href="{{ route('pages.events') }}">Eventos y Noticias</a></div>
+              <div><a href="{{ route('pages.contact') }}">Contáctanos</a></div>
               <div class="div-clear-mb"></div>
             </div>
             <p class="footer__address">

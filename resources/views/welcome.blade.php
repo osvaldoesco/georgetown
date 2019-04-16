@@ -99,6 +99,12 @@
               <h4>GRAN APERTURA!!! ornd ere efdef efef GRAN APERTURA!!! GRAN APERTURA!!!</h4>
               <p class="date">2019/03/27</p>
               <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy...</p>
+              <div class="btn-event-cont">
+                <button class="site-button">
+                  Leer más
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -110,6 +116,12 @@
               <p class="date">2019/03/27</p>
               <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy...
               </p>
+              <div class="btn-event-cont">
+                <button class="site-button">
+                  Leer más
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -30,3 +30,11 @@ Route::get('/contacto', function () {
 Route::get('/quienes-somos', function () {
     return view('site.pages.about_us');
 })->name('pages.about_us');
+
+Route::get('/eventos-y-noticias', function () {
+    return view('site.pages.events');
+})->name('pages.events');
+
+Route::get('/servicios', function () {
+    return view('site.services');
+})->name('pages.services');
