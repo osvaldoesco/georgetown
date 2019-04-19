@@ -17421,6 +17421,10 @@ footer {
     bottom: 0px;
     height: 100px;
   }
+
+  .disting .schedules-text {
+    text-align: center;
+  }
 }
 
 /* Eventos y noticias */
@@ -17565,5 +17569,46 @@ footer {
   width: 280px;
   height: 3px;
   margin: 40px auto 0px;
+}
+
+/*  COURSES PAGE */
+
+.courses-page {
+  background-color: #f2f2f2;
+}
+
+.courses-page .title-decorated {
+  text-align: center;
+}
+
+.course__img img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.course__description .title-decorated {
+  text-align: left;
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.course__description .title-decorated:before {
+  width: 20px;
+  height: 10px;
+  background-size: 180%;
+}
+
+.course__description .title-decorated:after {
+  display: none;
+}
+
+.course__description .normal-text {
+  text-align: justify;
+  padding: 10px 0px 30px;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
 }
 
