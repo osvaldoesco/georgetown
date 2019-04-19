@@ -17445,3 +17445,125 @@ footer {
   box-shadow: none;
 }
 
+.contact__map-cont {
+  background-color: #f2f2f2;
+}
+
+.contact__map-cont .title-decorated {
+  text-align: center;
+}
+
+/* Contact Us */
+
+#map {
+  height: 250px;
+  width: 100%;
+  margin: 40px 0px 20px;
+}
+
+@media (min-width: 576px) {
+  #map {
+    height: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  #map {
+    height: 450px;
+  }
+}
+
+.contact-us {
+  background-color: #e6e6e6;
+}
+
+.contact-us .home__students {
+  padding-bottom: 0px;
+}
+
+@media (min-width: 992px) {
+  .contact-us .home__students {
+    padding-bottom: 60px;
+  }
+}
+
+.message-cont {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.contact__message .title,
+.contact__message .title-decorated {
+  margin-bottom: 2px;
+  font-size: 20px;
+}
+
+.contact__message .normal-text {
+  text-align: left;
+  padding-left: 0px;
+  padding-top: 0px;
+}
+
+@media (min-width: 992px) {
+  .contact__message {
+    border-right: 2px solid #49dfc7;
+  }
+}
+
+.contact__form input,
+.contact__form textarea {
+  border: 0;
+  border-radius: 0px;
+}
+
+@media (min-width: 992px) {
+  .contact__form {
+    padding-right: 40px;
+  }
+}
+
+.contact__information {
+  padding: 40px 0px 0px;
+  text-align: center;
+}
+
+.contact__information img {
+  width: 130px;
+}
+
+.contact__information .normal-text {
+  margin: 10px 0px 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.contact__information .normal-text span {
+  font-weight: bold;
+}
+
+.contact__information .blue-text {
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  .contact__information {
+    text-align: left;
+    padding: 40px 40px 40px;
+  }
+
+  .contact__information .normal-text {
+    text-align: left;
+  }
+}
+
+.blue-text {
+  color: #476fb3;
+}
+
+.green-line {
+  background-color: #49dfc7;
+  width: 280px;
+  height: 3px;
+  margin: 40px auto 0px;
+}
+
