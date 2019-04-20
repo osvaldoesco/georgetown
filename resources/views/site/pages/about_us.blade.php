@@ -5,11 +5,25 @@
     <div class="about-us__header">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <h3 class="title-decorated-left">
-              QUIENES <span>SOMOS?</span>
-            </h3>
-          </div>
+            <div class="col-md-6 p-right-0">
+              <div class="white-cont">
+                <h3 class="title-decorated-left">
+                  QUIENES <span>SOMOS?</span> 
+                </h3>
+                <p class="p-justify">
+                  Georgetown English Academy, fundada en 2019, está dirigida 
+                  actualmente por un equipo de graduados de las escuelas más 
+                  prestigiosas de Estados Unidos y El Salvador. A diferencia 
+                  de la mayoría de nuestros competidores, los instructores de 
+                  TOEFL IBT&ITP, TOEIC, SAT prep de Georgetown English Academy 
+                  tienen un historial inigualable de logros académicos, 
+                  experiencias de enseñanza en el area de  TOEFL y éxito 
+                  profesional después de graduarse en escuelas de primera clase. 
+                  Georgetown English Academy ofrece la preparación más eficiente y 
+                  rentable disponible para el Toeic, Toefl IBT, ITP y SAT. 
+                </p>
+              </div>
+            </div>
           <div class="col-md-6">
             Slider
           </div>
