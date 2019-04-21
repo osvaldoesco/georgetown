@@ -17048,6 +17048,10 @@ footer {
   padding-right: 50px;
 }
 
+.slide-caption-mb .site-button {
+  box-shadow: none;
+}
+
 .slide-caption {
   width: 500px;
   position: absolute;
@@ -17065,6 +17069,10 @@ footer {
 .slide-caption p {
   font-size: 16px;
   padding-right: 100px;
+}
+
+.slide-caption .site-button {
+  box-shadow: none;
 }
 
 .home__events {
@@ -17838,7 +17846,7 @@ footer {
 
 .about-us__team .teacher-cont {
   box-shadow: 1px 1px 10px #ccc;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .about-us__team .teacher-cont img {
@@ -17853,5 +17861,6 @@ footer {
   font-size: 15px;
   padding: 10px 0px;
   font-weight: 600;
+  margin-bottom: 0px;
 }
 

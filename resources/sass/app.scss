@@ -314,6 +314,9 @@ footer {
     font-size: 15px;
     padding-right: 50px;
   }
+  .site-button{
+    box-shadow: none;
+  }
 }
 
 .slide-caption{
@@ -330,6 +333,9 @@ footer {
   p{
     font-size: 16px;
     padding-right: 100px;
+  }
+  .site-button{
+    box-shadow: none;
   }
 }
 
@@ -986,7 +992,7 @@ footer {
   }
   .teacher-cont{
     box-shadow: 1px 1px 10px #ccc;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     img{
       width: 100%;
     }
@@ -999,5 +1005,6 @@ footer {
     font-size: 15px;
     padding: 10px 0px;
     font-weight: 600;
+    margin-bottom: 0px;
   }
 }
