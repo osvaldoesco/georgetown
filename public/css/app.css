@@ -17267,10 +17267,7 @@ footer {
   text-shadow: 1px 1px 10px #999999;
 }
 
-.services-block .course-decoration,
-.services-block--yellow .course-decoration,
-.services-block--gray .course-decoration,
-.services-block--green .course-decoration {
+.course-decoration {
   position: absolute;
   right: 0px;
   bottom: 0px;
@@ -17711,6 +17708,10 @@ footer {
   align-items: center;
 }
 
+.h-100 {
+  height: 100%;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -17862,5 +17863,81 @@ footer {
   padding: 10px 0px;
   font-weight: 600;
   margin-bottom: 0px;
+}
+
+.kids-course {
+  padding: 50px 0px 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .kids-course {
+    padding-top: 20px;
+  }
+}
+
+.kids-link-cont {
+  display: flex;
+  background: #476fb3;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  position: relative;
+  box-shadow: 1px 1px 10px #ccc;
+}
+
+.kids-link-cont i {
+  position: absolute;
+  top: 45%;
+  right: 100px;
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px 5px #cccccc;
+}
+
+.kids-img {
+  box-shadow: 1px 1px 10px #ccc;
+}
+
+.kids-img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .kids-img {
+    margin-bottom: 10px;
+  }
+}
+
+.kids-link {
+  color: white;
+  padding-left: 100px;
+}
+
+.kids-link h3 {
+  font-size: 26px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.kids-link .second {
+  font-size: 29px;
+}
+
+@media screen and (max-width: 991px) {
+  .kids-link {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .p-left-5 {
+    padding-left: 5px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .p-right-5 {
+    padding-right: 5px;
+  }
 }
 

@@ -141,6 +141,24 @@
                 </div>
               </div> 
             </div>
+            <div class="row kids-course">
+              <div class="col-md-6 p-right-5">
+                <div class="kids-img">
+                <img alt="kids classes" src="{{ asset('img/kids.png') }}" />
+                </div>
+              </div>
+              <div class="col-md-6 vertical-center p-left-5">
+                <div class="kids-link-cont">
+                  <i class="fas fa-arrow-right"></i>
+                  <img alt="decorate" src="{{ asset('img/course-decoration2.png') }}" class="course-decoration" />
+                  <div class="kids-link">
+                    <h3>ENGLISH CLASSES</h3>
+                    <h3 class="second">For children</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         <button class="site-button">
             Vea nuestra metodología
