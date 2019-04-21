@@ -38,3 +38,6 @@ Route::get('/eventos-y-noticias', function () {
 Route::get('/servicios', function () {
     return view('site.services');
 })->name('pages.services');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

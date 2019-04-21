@@ -30,10 +30,12 @@
                 la excelencia para sus clientes. 
               </p>
               <div class="btn-cont">
-                <button class="site-button">
-                  Contáctenos
-                  <i class="fas fa-arrow-right"></i>
-                </button>
+                <a href="/contacto">
+                  <button class="site-button">
+                    Contáctenos
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                </a>
               </div>
             </div>
           </div>

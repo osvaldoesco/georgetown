@@ -5,7 +5,7 @@
     <div class="about-us__header">
       <div class="container">
         <div class="row">
-            <div class="col-md-6 p-right-0">
+            <div class="col-md-8 offset-md-2 offset-lg-0 col-lg-6 p-right-0">
               <div class="white-cont">
                 <h3 class="title-decorated-left">
                   QUIENES <span>SOMOS?</span> 
@@ -24,8 +24,11 @@
                 </p>
               </div>
             </div>
-          <div class="col-md-6">
-            Slider
+          <div class="col-md-8 offset-md-2 offset-lg-0 col-lg-6 p-left-0 about-us__slider-cont">
+            <div class="about-us__slider">
+              <div><img alt="slider1" src="{{ asset('img/fake/quienes-somos-slider.png') }}" /></div>
+              <div><img alt="slider2" src="{{ asset('img/fake/640x359.png') }}" /></div>
+            </div>
           </div>
         </div>
       </div>
@@ -78,6 +81,89 @@
                 Academy ofrezca la preparación más eficiente en tiempo y costo disponible 
                 para el Toeic, Toefl IBT, ITP y SAT. 
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="disting">
+            <img alt="decoration" class="right-decoration" src="{{ asset('img/schedules_right.png') }}" />
+              <p class="schedules-text">
+                Lo que distingue a Georgetown English Academy no es sólo su 
+                incomparable calidad y métodos  de enseñanza, materiales de 
+                estudio y servicio de asesoría, sino una verdadera dedicación 
+                a las necesidades individuales y una búsqueda interminable de 
+                la excelencia para sus clientes. 
+              </p>
+              <div class="btn-cont">
+                <a href="/contacto">
+                  <button class="site-button">
+                    Contáctenos
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-us__team">
+      <h3 class="title-decorated">TEAM <span>GEORGETOWN</span> </h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="teacher-cont">
+              <img alt="teacher 1" src="{{ asset('img/fake/teacher1.png')}}" />
+              <label class="position"> CEO </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="teacher-cont">
+              <img alt="teacher 1" src="{{ asset('img/fake/teacher2.png')}}" />
+              <label class="position"> Designer </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="teacher-cont">
+              <img alt="teacher 1" src="{{ asset('img/fake/teacher3.png')}}" />
+              <label class="position"> Team Lead </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="teacher-cont">
+              <img alt="teacher 1" src="{{ asset('img/fake/teacher4.png')}}" />
+              <label class="position"> Receptionist </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="teacher-cont">
+              <img alt="teacher 1" src="{{ asset('img/fake/teacher4.png')}}" />
+              <label class="position"> Teacher </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="teacher-cont">
+              <img alt="teacher 1" src="{{ asset('img/fake/teacher3.png')}}" />
+              <label class="position"> Teacher </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="teacher-cont">
+              <img alt="teacher 1" src="{{ asset('img/fake/teacher2.png')}}" />
+              <label class="position"> Teacher </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="teacher-cont">
+              <img alt="teacher 1" src="{{ asset('img/fake/teacher1.png')}}" />
+              <label class="position"> Teacher </label>
             </div>
           </div>
         </div>

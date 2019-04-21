@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
   </head>
   <body>
     <header>
@@ -29,7 +30,7 @@
                   <a class="nav-item nav-link {{ $page == 'courses' ? 'active' : ''}}" href="{{ route('pages.courses') }}">Cursos</a>
                   <a class="nav-item nav-link {{ $page == 'events' ? 'active' : ''}}" href="{{ route('pages.events') }}">Eventos y noticias</a>
                   <a class="nav-item nav-link {{ $page == 'contact' ? 'active' : ''}}" href="{{ route('pages.contact') }}">Contáctenos</a>
-                  <a class="" href="#">
+                  <a class="" href="{{ route('login') }}">
                     <div class="login-link">
                       <div class="gray-part">
                         <img alt="login" src="{{asset('img/login.png')}}">

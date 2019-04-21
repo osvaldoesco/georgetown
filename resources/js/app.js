@@ -65,3 +65,12 @@ $('.slider-events').slick({
     autoplaySpeed: 4000,
     slidesToScroll: 1
 });
+$('.about-us__slider').slick({
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    slidesToScroll: 1
+});

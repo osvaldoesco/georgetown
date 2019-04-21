@@ -104,6 +104,11 @@ header {
     color: $green;
     line-height: 35px;
   }
+  &:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    color: $red;
+  }
 }
 
 .gray-part{
@@ -117,6 +122,10 @@ header {
   label{
     margin-bottom: 0px;
     color: blue;
+    &:hover{
+      opacity: 0.9;
+      cursor: pointer;
+    }
   }
   @media screen and (max-width: 991px){
     margin-top: 20px;
@@ -249,10 +258,15 @@ footer {
 }
 
 //Home
+.home-page{
+  background-color: #f2f2f2;
+}
+
 .home__slider{
   text-align: center;
   color: white;
   width: 100%;
+  background-color: #f2f2f2;
   img{
     width: 100% !important;
   }
@@ -278,6 +292,47 @@ footer {
   }
 }
 
+.slide-item{
+  position: relative;
+  img{
+    z-index: 2;
+  }
+}
+
+.slide-caption-mb{
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  text-align: left;
+  top: 60px;
+  padding: 0px 25px;
+  h3{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  p{
+    font-size: 15px;
+    padding-right: 50px;
+  }
+}
+
+.slide-caption{
+  width: 500px;
+  position: absolute;
+  z-index: 3;
+  text-align: left;
+  top: 100px;
+  left: 40px;
+  h3{
+    font-size: 21px;
+    font-weight: 700;
+  }
+  p{
+    font-size: 16px;
+    padding-right: 100px;
+  }
+}
+
 .home__events{
   padding: 60px 0px;
   background-color: #f2f0f2;
@@ -288,7 +343,7 @@ footer {
 .home__services{
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: $light-gray;
+  background-color: #f2f2f2;
   text-align: center;
   @media screen and (max-width: 991px){
     padding-top: 30px;
@@ -411,6 +466,7 @@ footer {
   text-align: left;
   padding:  25px 15px;
   box-shadow: 1px 1px 10px $gray;
+  position: relative;
   h4{
     text-transform: uppercase;
     width: 180px;
@@ -426,6 +482,13 @@ footer {
   i{
     font-size: 30px;
     text-shadow: 1px 1px 10px #999999;
+  }
+  .course-decoration{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.8;
+    width: 40px;
   }
 }
 
@@ -864,5 +927,77 @@ footer {
   max-width: 200px;
   @media screen and (max-width: 991px){
     margin: 30px 0px 40px;
+  }
+}
+
+.arrows{
+  position: absolute;
+  background-color: white;
+  border-radius: 0px;
+  z-index: 10;
+  height: 25px;
+  width: 25px;
+  &:before{
+    color: $red;
+  }
+}
+
+.about-us__slider{
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  img{
+    padding: 0;
+    margin: 0;
+    width: auto;
+    max-width: 100%;
+  }
+  .slick-prev{
+    @extend  .arrows;
+    left: 0px;
+  }
+  .slick-next{
+    @extend  .arrows;
+    right: 0px;
+  }
+  @media (min-width: 992px){
+    height: 299px;
+    img{
+      height: 100%;
+    }
+    .slick-list{
+      width: 100%;
+    }
+  }
+  @media (min-width: 1200px){
+    height: 280px;
+  }
+}
+
+.about-us__slider-cont{
+
+}
+
+.about-us__team{
+  padding: 40px 0px 25px;
+  .title-decorated{
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .teacher-cont{
+    box-shadow: 1px 1px 10px #ccc;
+    margin-bottom: 15px;
+    img{
+      width: 100%;
+    }
+  }
+  label{
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    color: #808080;
+    font-size: 15px;
+    padding: 10px 0px;
+    font-weight: 600;
   }
 }
