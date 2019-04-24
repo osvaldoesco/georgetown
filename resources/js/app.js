@@ -74,3 +74,11 @@ $('.about-us__slider').slick({
     autoplaySpeed: 4000,
     slidesToScroll: 1
 });
+
+
+$(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        console.log('hola');
+    });
+});
