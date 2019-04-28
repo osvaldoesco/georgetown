@@ -33,42 +33,44 @@
               </div>
             </div>
             @endif
-          <a href="{{ route('members.create') }}">
+          <a href="{{ route('promotions.create') }}">
             <button class="btn btn-primary float-right">
               Nuevo
             </button>
           </a>
           <h3 class="admin-title">
-            Miembros
+            Promociones
           </h3>
           <table class="table table-indexs">
             <thead class="thead">
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Cargo</th>
-                <th scope="col">foto</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Estado</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Borrar</th>
               </tr>
             </thead>
             <tbody>
-              @foreach ($members as $key => $member)
+              @foreach ($promotions as $key => $promotion)
                 <tr>
                   <th scope="row">{{ $key + 1 }}</th>
-                  <td>{{ $member->name }}</td>
-                  <td>{{ $member->position }}</td>
+                  <td>{{ $promotion->title }}</td>
                   <td>
-                    <img src="{{ asset($member->picture) }}" alt="{{ $member->name }}" class="admin-img-preview" />
+                    <img src="{{ asset($promotion->image) }}" alt="{{ $promotion->title }}" class="admin-img-preview" />
+                  </td>
+                  <td>
+                    {{ ($promotion->status == 1) ? 'Activo' : 'Inactivo' }}
                   </td>
                   <td>
                     <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
                   </td>
                   <td>
-                    <a href="#" class="delete-member" data-member="{{ $member->id }}">
+                    <a href="#" class="delete-promotion" data-promotion="{{ $promotion->id }}">
                       <button class="btn btn btn-outline-danger btn-sm"><i class="fas fa-times"></i></button>
                     </a>
-                    <form action="{{ route('members.destroy', $member->id) }}" id="delete-member-form-{{$member->id}}" class="d-none" method="POST">
+                    <form action="{{ route('promotions.destroy', $promotion->id) }}" id="delete-promotion-form-{{$promotion->id}}" class="d-none" method="POST">
                       @method('DELETE')
                       @csrf
                     </form>
@@ -87,14 +89,14 @@
 @section('scripts')
   <script type="text/javascript">
     $(document).ready(function() {
-      $('.delete-member').on('click', function(e) {
+      $('.delete-promotion').on('click', function(e) {
         e.preventDefault();  
-        var memberId = $(this).data('member');
+        var promotionId = $(this).data('promotion');
         $('#confirm').modal({
           backdrop: 'static',
           keyboard: false
         }).on('click', '#delete-btn', function() {
-          var form = '#delete-member-form-'+ memberId
+          var form = '#delete-promotion-form-' + promotionId
           $(form).submit();
         });
       });

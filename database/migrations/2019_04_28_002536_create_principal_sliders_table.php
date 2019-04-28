@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMembersTable extends Migration
+class CreatePrincipalSlidersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateMembersTable extends Migration
      */
     public function up()
     {
-        Schema::create('members', function (Blueprint $table) {
+        Schema::create('principal_sliders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name')->nullable();
-            $table->string('position')->default('Teacher');
-            $table->string('picture')->default('0');
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
+            $table->string('image');
+            $table->string('image_mobile');
+            $table->string('link')->nullable();
             $table->integer('priority')->default(10);
+            $table->tinyInteger('status')->default('0')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ class CreateMembersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('members');
+        Schema::dropIfExists('principal_sliders');
     }
 }

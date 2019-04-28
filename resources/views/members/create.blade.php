@@ -20,9 +20,12 @@
               <label for="position">Cargo</label>
               <input type="text" class="form-control" name="position" placeholder="Cargo">
             </div>
-            
+            <div class="form-group">
+              <label for="priority">Prioridad</label>
+              <input type="number" class="form-control" name="priority" placeholder="prioridad">
+            </div>
             <br />
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
           </form>   
         </div>    
       </div>

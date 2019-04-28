@@ -3,68 +3,42 @@
 @section('content')
   <div class="home-page">
     <div class="home__slider visible-desktop">
-      <div class="slide-item">
+      @foreach ($principal_slider as $item)
+        <div class="slide-item">
           <div class="slide-caption">
-            <h3> SOMOS GEORGETOWN, ENGLISH ACADEMY </h3>
+            <h3> {{ $item->title }} </h3>
             <p>
-              Ayudamos a jóvenes y adultos a certificarse con la 
-              mayor puntuación en pruebas TOEIC, TOEFL, SAT 
-              y GRAMMAR en El Salvador...
+              {{ $item->description }}
             </p>
-            <button class="site-button">
-              Conocer más
-              <i class="fas fa-arrow-right"></i>
-            </button>
+            <a href="{{ $item->link }}">
+              <button class="site-button">
+                Conocer más
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </a>
           </div>
-        <img alt="slider" src="{{ asset('img/fake/slider1.jpg')}}" />
-      </div>
-      <div class="slide-item">
-        <div class="slide-caption">
-          <h3> SOMOS GEORGETOWN, ENGLISH ACADEMY </h3>
-          <p>
-            Ayudamos a jóvenes y adultos a certificarse con la 
-            mayor puntuación en pruebas TOEIC, TOEFL, SAT 
-            y GRAMMAR en El Salvador...
-          </p>
-          <button class="site-button">
-            Conocer más
-            <i class="fas fa-arrow-right"></i>
-          </button>
-        </div>
-        <img alt="slider" src="{{ asset('img/fake/fake-slider.png')}}" />
-      </div>
+          <img alt="slider" src="{{ asset($item->image) }}" />
+        </div>  
+      @endforeach
     </div>
     <div class="home__slider-mobile visible-mobile">
-      <div class="slide-item">
-        <div class="slide-caption-mb">
-          <h3> SOMOS GEORGETOWN, ENGLISH ACADEMY </h3>
-          <p>
-            Ayudamos a jóvenes y adultos a certificarse con la 
-            mayor puntuación en pruebas TOEIC, TOEFL, SAT 
-            y GRAMMAR en El Salvador...
-          </p>
-          <button class="site-button">
-            Conocer más
-            <i class="fas fa-arrow-right"></i>
-          </button>
+      @foreach ($principal_slider as $item)
+        <div class="slide-item">
+          <div class="slide-caption-mb">
+            <h3> {{ $item->title }} </h3>
+            <p>
+              {{ $item->description }}
+            </p>
+            <a href="{{ $item->link }}">
+              <button class="site-button">
+                Conocer más
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </a>
+          </div>
+          <img alt="slider-mobile" src="{{ asset($item->image_mobile) }}" />
         </div>
-        <img alt="slider-mobile" src="{{ asset('img/fake/slider1-mobile.jpg')}}" />
-      </div>
-      <div class="slide-item">
-        <div class="slide-caption-mb">
-          <h3> SOMOS GEORGETOWN, ENGLISH ACADEMY </h3>
-          <p>
-            Ayudamos a jóvenes y adultos a certificarse con la 
-            mayor puntuación en pruebas TOEIC, TOEFL, SAT 
-            y GRAMMAR en El Salvador...
-          </p>
-          <button class="site-button">
-            Conocer más
-            <i class="fas fa-arrow-right"></i>
-          </button>
-        </div>
-        <img alt="slider-mobile-fake" src="{{ asset('img/fake/fake-mobile.png')}}" />
-      </div>
+      @endforeach
     </div>
     <div class="home__services">
         <h3 class="title-decorated">
@@ -206,8 +180,9 @@
           </div>
           <div class="col-12 col-lg-4">
             <div class="slider-events">
-                <div><img alt="slider" src="{{ asset('img/fake/slider-events.jpg')}}" /></div>
-                <div><img alt="slider2" src="{{ asset('img/fake/fake-slider-events.png')}}" /></div>
+              @foreach ($promotions as $promotion)
+                <div><img alt="{{ $promotion->title }}" src="{{ asset($promotion->image)}}" /></div>
+              @endforeach
             </div>
           </div>
         </div>

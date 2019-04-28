@@ -118,54 +118,14 @@
       <h3 class="title-decorated">TEAM <span>GEORGETOWN</span> </h3>
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="teacher-cont">
-              <img alt="teacher 1" src="{{ asset('img/fake/teacher1.png')}}" />
-              <label class="position"> CEO </label>
+          @foreach ($members as $member)
+            <div class="col-md-6 col-lg-3">
+              <div class="teacher-cont">
+                <img alt="{{ $member->name }}" src="{{ asset($member->picture) }}" />
+                <label class="position"> {{ $member->position }} </label>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="teacher-cont">
-              <img alt="teacher 1" src="{{ asset('img/fake/teacher2.png')}}" />
-              <label class="position"> Designer </label>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="teacher-cont">
-              <img alt="teacher 1" src="{{ asset('img/fake/teacher3.png')}}" />
-              <label class="position"> Team Lead </label>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="teacher-cont">
-              <img alt="teacher 1" src="{{ asset('img/fake/teacher4.png')}}" />
-              <label class="position"> Receptionist </label>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="teacher-cont">
-              <img alt="teacher 1" src="{{ asset('img/fake/teacher4.png')}}" />
-              <label class="position"> Teacher </label>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="teacher-cont">
-              <img alt="teacher 1" src="{{ asset('img/fake/teacher3.png')}}" />
-              <label class="position"> Teacher </label>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="teacher-cont">
-              <img alt="teacher 1" src="{{ asset('img/fake/teacher2.png')}}" />
-              <label class="position"> Teacher </label>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="teacher-cont">
-              <img alt="teacher 1" src="{{ asset('img/fake/teacher1.png')}}" />
-              <label class="position"> Teacher </label>
-            </div>
-          </div>
+          @endforeach  
         </div>
       </div>
     </div>

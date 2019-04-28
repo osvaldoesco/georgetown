@@ -22,7 +22,7 @@ class MembersController extends Controller
     
     public function store(Request $request)
     {
-        $path = 'images/members/';
+        $path = 'storage/images/members/';
         $imageName = time().'.'.request()->picture->getClientOriginalExtension();
         request()->picture->move(public_path($path), $imageName);
         $member = Member::create([
@@ -54,7 +54,10 @@ class MembersController extends Controller
     public function destroy($id)
     {
         $member = Member::find($id);
-        $member->delete();
-        return redirect()->route('members.index')->with('success','Miembro eliminado');
+        if ($member) {
+          $member->delete();
+          return redirect()->route('members.index')->with('success','Miembro eliminado con exito');
+        }
+        return redirect()->route('members.index')->with('error','Error al eliminar Registro');   
     }
 }

@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Pages
+Route::get('/','PagesController@home');
 
 Route::get('/horarios', function () {
     return view('site.pages.schedules');
@@ -27,9 +26,7 @@ Route::get('/contacto', function () {
     return view('site.pages.contact');
 })->name('pages.contact');
 
-Route::get('/quienes-somos', function () {
-    return view('site.pages.about_us');
-})->name('pages.about_us');
+Route::get('/quienes-somos', 'PagesController@about_us')->name('pages.about_us');
 
 Route::get('/eventos-y-noticias', function () {
     return view('site.pages.events');
@@ -43,4 +40,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //ADMIN
+Route::get('/admin', 'HomeController@index')->name('home');
 Route::resource('members', 'MembersController');
+Route::resource('principal_slider', 'PrincipalSlidersController');
+Route::resource('promotions', 'PromotionsController');
