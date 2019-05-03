@@ -51,7 +51,7 @@
               <a href="#">Noticias y Eventos</a>
             </li>
             <li>
-              <a href="#">Cursos</a>
+              <a href="{{ route('courses.index') }}">Cursos</a>
             </li>
           </ul>
         </nav>

@@ -17,7 +17,7 @@ class PagesController extends Controller
   }
 
   public function about_us() {
-    $members = Member::all()->orderBy('priority');
+    $members = Member::orderBy('priority')->get();
     return view('site.pages.about_us', compact('members'));
   }
 

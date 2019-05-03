@@ -40,7 +40,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //ADMIN
-Route::get('/admin', 'HomeController@index')->name('home');
+Route::get('/gt_admin', function(){
+
+    return view('admin');
+})->name('gt_admin');
+
 Route::resource('members', 'MembersController');
 Route::resource('principal_slider', 'PrincipalSlidersController');
 Route::resource('promotions', 'PromotionsController');
+Route::resource('courses', 'CoursesController');
