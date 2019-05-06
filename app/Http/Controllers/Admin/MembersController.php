@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Member;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class MembersController extends Controller
 {
@@ -11,12 +12,12 @@ class MembersController extends Controller
     public function index()
     {
         $members = Member::all();
-        return view('members.index', compact('members'));
+        return view('admin.members.index', compact('members'));
     }
 
     public function create()
     {
-        return view('members.create');
+        return view('admin.members.create');
     }
 
     

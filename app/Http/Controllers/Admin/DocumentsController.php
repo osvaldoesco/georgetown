@@ -1,22 +1,23 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Course;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class CoursesController extends Controller
+class DocumentsController extends Controller
 {
    
     public function index()
     {
         $courses = Course::all();
-        return view('courses.index', compact('courses'));
+        return view('admin.courses.index', compact('courses'));
     }
 
     public function create()
     {
-        return view('courses.create');
+        return view('admin.courses.create');
     }
 
     

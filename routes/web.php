@@ -28,6 +28,10 @@ Route::get('/contacto', function () {
 
 Route::get('/quienes-somos', 'PagesController@about_us')->name('pages.about_us');
 
+Route::get('/gt_login', function(){
+    return view('site.pages.login');
+})->name('pages.gt_login');
+
 Route::get('/eventos-y-noticias', function () {
     return view('site.pages.events');
 })->name('pages.events');
@@ -35,17 +39,24 @@ Route::get('/eventos-y-noticias', function () {
 Route::get('/servicios', function () {
     return view('site.services');
 })->name('pages.services');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/documents', function(){
+    return view('site.pages.documents');
+})->name('documents.index');
+
+
 //ADMIN
-Route::get('/gt_admin', function(){
-
-    return view('admin');
-})->name('gt_admin');
-
-Route::resource('members', 'MembersController');
-Route::resource('principal_slider', 'PrincipalSlidersController');
-Route::resource('promotions', 'PromotionsController');
-Route::resource('courses', 'CoursesController');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function() {
+    Route::get('/gt_admin', function(){
+        return view('admin');
+    })->name('gt_admin');
+    Route::resource('members', 'Admin\MembersController');
+    Route::resource('principal_slider', 'Admin\PrincipalSlidersController');
+    Route::resource('promotions', 'Admin\PromotionsController');
+    Route::resource('courses', 'Admin\CoursesController');
+    Route::resource('documents', 'Admin\DocumentsController');
+});

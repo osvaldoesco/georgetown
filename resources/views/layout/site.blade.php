@@ -30,15 +30,30 @@
                   <a class="nav-item nav-link {{ $page == 'courses' ? 'active' : ''}}" href="{{ route('pages.courses') }}">Cursos</a>
                   <a class="nav-item nav-link {{ $page == 'events' ? 'active' : ''}}" href="{{ route('pages.events') }}">Eventos y noticias</a>
                   <a class="nav-item nav-link {{ $page == 'contact' ? 'active' : ''}}" href="{{ route('pages.contact') }}">Contáctenos</a>
-                  <a class="" href="{{ route('login') }}">
-                    <div class="login-link">
-                      <div class="gray-part">
-                        <img alt="login" src="{{asset('img/login.png')}}">
-                        <label>Login Estudiantes </label>
+                  @if (Auth::check())
+                    <a class="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout') }}">
+                      <div class="login-link">
+                        <div class="gray-part">
+                          <img alt="login" src="{{asset('img/login.png')}}">
+                          <label>Salir </label>
+                        </div>
+                        <i class="fas fa-sign-out-alt visible-desktop"></i>
                       </div>
-                      <i class="fas fa-arrow-right visible-desktop"></i>
-                    </div>
-                  </a>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                  @else
+                    <a class="" href="{{ route('pages.gt_login') }}">
+                      <div class="login-link">
+                        <div class="gray-part">
+                          <img alt="login" src="{{asset('img/login.png')}}">
+                          <label>Login Estudiantes </label>
+                        </div>
+                        <i class="fas fa-arrow-right visible-desktop"></i>
+                      </div>
+                    </a>
+                  @endif
                 </div>
               </div>
             </nav>

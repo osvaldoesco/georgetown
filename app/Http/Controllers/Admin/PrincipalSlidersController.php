@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\PrincipalSlider;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PrincipalSlidersController extends Controller
 {
@@ -11,12 +12,12 @@ class PrincipalSlidersController extends Controller
     public function index()
     {
         $sliders = PrincipalSlider::all();
-        return view('principal_slider.index', compact('sliders'));
+        return view('admin.principal_slider.index', compact('sliders'));
     }
 
     public function create()
     {
-        return view('principal_slider.create');
+        return view('admin.principal_slider.create');
     }
 
     
