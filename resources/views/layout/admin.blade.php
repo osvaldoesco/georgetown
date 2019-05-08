@@ -53,6 +53,9 @@
             <li>
               <a href="{{ route('courses.index') }}">Cursos</a>
             </li>
+            <li>
+              <a href="{{ route('users.index') }}">Usuarios</a>
+            </li>
           </ul>
         </nav>
         <div id="content">

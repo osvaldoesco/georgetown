@@ -51,6 +51,7 @@
                 <th scope="col">Mobile</th>
                 <th scope="col">Enlace</th>
                 <th scope="col">Estado</th>
+                <th scope="col">Prioridad</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Borrar</th>
               </tr>
@@ -74,7 +75,12 @@
                     {{ ($slide->status == 1) ? 'Activo' : 'Inactivo' }}
                   </td>
                   <td>
-                    <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
+                    {{ $slide->priority }}
+                  </td>
+                  <td>
+                    <a href="{{ route('principal_slider.edit', $slide->id) }}">
+                      <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
+                    </a>
                   </td>
                   <td>
                     <a href="#" class="delete-slide" data-slide="{{ $slide->id }}">

@@ -59,4 +59,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
     Route::resource('promotions', 'Admin\PromotionsController');
     Route::resource('courses', 'Admin\CoursesController');
     Route::resource('documents', 'Admin\DocumentsController');
+    Route::resource('users', 'Admin\UsersController');
 });

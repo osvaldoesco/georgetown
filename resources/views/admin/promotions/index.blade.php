@@ -48,6 +48,7 @@
                 <th scope="col">Titulo</th>
                 <th scope="col">Imagen</th>
                 <th scope="col">Estado</th>
+                <th scope="col">Prioridad</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Borrar</th>
               </tr>
@@ -64,7 +65,12 @@
                     {{ ($promotion->status == 1) ? 'Activo' : 'Inactivo' }}
                   </td>
                   <td>
-                    <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
+                    {{ $promotion->priority }}
+                  </td>
+                  <td>
+                    <a href="{{ route('promotions.edit', $promotion->id) }}">
+                      <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
+                    </a>
                   </td>
                   <td>
                     <a href="#" class="delete-promotion" data-promotion="{{ $promotion->id }}">

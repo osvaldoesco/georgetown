@@ -48,6 +48,7 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Cargo</th>
                 <th scope="col">foto</th>
+                <th scope="col">Prioridad</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Borrar</th>
               </tr>
@@ -61,8 +62,11 @@
                   <td>
                     <img src="{{ asset($member->picture) }}" alt="{{ $member->name }}" class="admin-img-preview" />
                   </td>
+                  <td>{{ $member->priority }}</td>
                   <td>
-                    <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
+                    <a href="{{ route('members.edit', ['member' => $member->id]) }}">
+                      <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
+                    </a>
                   </td>
                   <td>
                     <a href="#" class="delete-member" data-member="{{ $member->id }}">
