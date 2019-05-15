@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GeorgeTown English</title>
 
-    <link rel="shortcut icon" href="{{ secure_asset('img/favicon.ico') }}" />
-    <link rel="icon" type="image/vnd.microsoft.icon" href="{{ secure_asset('img/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="{{ asset('img/favicon.ico') }}">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <link href="{{ secure_asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/app.css')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
   </head>
@@ -111,7 +111,7 @@
         </div>
       </div>
     </footer>
-    <script src="{{ secure_asset('js/app.js')}}"></script>
+    <script src="{{ asset('js/app.js')}}"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </body>
 </html>

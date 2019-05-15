@@ -18,7 +18,7 @@ class CreatePromotionsTable extends Migration
             $table->string('title')->nullable();
             $table->string('image');
             $table->tinyInteger('status')->default('0')->nullable();
-            $table->string('priority')->default(10);
+            $table->integer('priority')->default(10);
             $table->timestamps();
         });
     }
