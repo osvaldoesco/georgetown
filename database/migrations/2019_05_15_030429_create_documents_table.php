@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDocummentsTable extends Migration
+class CreateDocumentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,21 @@ class CreateDocummentsTable extends Migration
      */
     public function up()
     {
-      Schema::create('documments', function (Blueprint $table) {
-        $table->bigIncrements('id');
+      Schema::create('documents', function (Blueprint $table) {
+        $table->engine = 'InnoDB';
+        $table->increments('id');
+        $table->integer('course_id')->unsigned();
         $table->string('name');
         $table->string('description');
         $table->string('type');
         $table->string('duration')->nullable();
         $table->string('pages')->nullable();
-        $table->unsignedInteger('course_id');
-        $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
         $table->tinyInteger('status')->default('0')->nullable();
         $table->timestamps();
+      });
+
+      Schema::table('documents', function($table) {
+        $table->foreign('course_id')->references('id')->on('courses');
       });
     }
 
@@ -34,6 +38,6 @@ class CreateDocummentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('documments');
+        Schema::dropIfExists('documents');
     }
 }

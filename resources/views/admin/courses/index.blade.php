@@ -62,7 +62,9 @@
                     <img src="{{ asset($course->image) }}" alt="{{ $course->title }}" class="admin-img-preview" />
                   </td>
                   <td>
-                    <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
+                    <a href="{{ route('courses.edit', $course->id) }}">
+                      <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
+                    </a>
                   </td>
                   <td>
                     <a href="#" class="delete-course" data-course="{{ $course->id }}">

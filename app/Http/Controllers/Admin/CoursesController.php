@@ -46,7 +46,12 @@ class CoursesController extends Controller
    
     public function edit($id)
     {
-        //
+      $course = Course::find($id);
+      if ($course) {
+        return view('admin.courses.edit', compact('course'));
+      }else {
+        return redirect()->route('courses.index')->with('error', 'Curso no encontrado');;
+      }
     }
 
     public function update(Request $request, $id)
