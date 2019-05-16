@@ -18,9 +18,7 @@ Route::get('/horarios', function () {
     return view('site.pages.schedules');
 })->name('pages.schedules');
 
-Route::get('/cursos', function () {
-    return view('site.pages.courses');
-})->name('pages.courses');
+Route::get('/cursos','PagesController@courses')->name('pages.courses');
 
 Route::get('/contacto', function () {
     return view('site.pages.contact');

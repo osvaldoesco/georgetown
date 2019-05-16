@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Member;
 use App\PrincipalSlider;
 use App\Promotion;
+use App\Course;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -21,4 +22,8 @@ class PagesController extends Controller
     return view('site.pages.about_us', compact('members'));
   }
 
+  public function courses() {
+    $courses = Course::where('status', 1)->orderBy('priority')->get();
+    return view('site.pages.courses', compact('courses'));
+  }
 }
