@@ -26,4 +26,8 @@ class PagesController extends Controller
     $courses = Course::where('status', 1)->orderBy('priority')->get();
     return view('site.pages.courses', compact('courses'));
   }
+
+  public function documents() {
+    return view('site.pages.documents');
+  }
 }

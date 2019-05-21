@@ -39,7 +39,7 @@
             </button>
           </a>
           <h3 class="admin-title">
-            Miembros
+            Cursos
           </h3>
           <table class="table table-indexs">
             <thead class="thead">

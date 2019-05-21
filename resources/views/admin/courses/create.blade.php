@@ -20,7 +20,7 @@
               <textarea class="form-control" placeholder="..." name="description"></textarea>
             </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" name="image" lang="es">
+              <input type="file" class="custom-file-input" name="image" lang="es" id="custom-file-input">
               <label class="custom-file-label" for="customFileLang">Seleccionar Imagen(445x476)</label>
             </div>
             <div class="form-group">
@@ -38,4 +38,17 @@
       </div>
     </div>
   </div>
+@endsection
+
+@section('scripts')
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#custom-file-input').on('change',function(){
+        //get the file name
+        var fileName = $(this).val();
+        //replace the "Choose a file" label
+        $(this).next('.custom-file-label').html(fileName);
+      })
+    });
+  </script>   
 @endsection

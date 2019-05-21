@@ -42,10 +42,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/documents', function(){
-    return view('site.pages.documents');
-})->name('documents.index');
-
+Route::get('/documents','PagesController@documents')->name('documents.index');
 
 //ADMIN
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function() {

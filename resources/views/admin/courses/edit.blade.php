@@ -36,7 +36,7 @@
               @endif
             </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input {{ $errors->has('image') ? 'is-invalid' : '' }}" name="image" lang="es">
+              <input type="file" class="custom-file-input {{ $errors->has('image') ? 'is-invalid' : '' }}" name="image" lang="es" id="custom-file-input">
               <label class="custom-file-label" for="customFileLang">Seleccionar Imagen(445x476)</label>
               @if ($errors->has('image'))
                 <span class="invalid-feedback" role="alert">
@@ -64,4 +64,17 @@
       </div>
     </div>
   </div>
+@endsection
+
+@section('scripts')
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#custom-file-input').on('change',function(){
+        //get the file name
+        var fileName = $(this).val();
+        //replace the "Choose a file" label
+        $(this).next('.custom-file-label').html(fileName);
+      })
+    });
+  </script>   
 @endsection

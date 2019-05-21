@@ -31,6 +31,7 @@
                   <a class="nav-item nav-link {{ $page == 'events' ? 'active' : ''}}" href="{{ route('pages.events') }}">Eventos y noticias</a>
                   <a class="nav-item nav-link {{ $page == 'contact' ? 'active' : ''}}" href="{{ route('pages.contact') }}">Contáctenos</a>
                   @if (Auth::check())
+                    <a class="nav-item nav-link {{ $page == 'documents' ? 'active' : ''}}" href="/documents">Material de apoyo</a>
                     <a class="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout') }}">
                       <div class="login-link">
                         <div class="gray-part">

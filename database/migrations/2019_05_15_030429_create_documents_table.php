@@ -19,6 +19,7 @@ class CreateDocumentsTable extends Migration
         $table->integer('course_id')->unsigned();
         $table->string('name');
         $table->string('description');
+        $table->string('file');
         $table->string('type');
         $table->string('duration')->nullable();
         $table->string('pages')->nullable();
