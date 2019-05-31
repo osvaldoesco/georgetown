@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use \Auth;
 use App\Member;
 use App\PrincipalSlider;
 use App\Promotion;
@@ -28,6 +30,9 @@ class PagesController extends Controller
   }
 
   public function documents() {
-    return view('site.pages.documents');
+    if(Auth::check()){
+      return view('site.pages.documents');
+    }
+    return redirect()->route('pages.gt_login');
   }
 }

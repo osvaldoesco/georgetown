@@ -19,11 +19,11 @@
               <label for="type">Tipo</label>
               <select class="form-control" name="type" placeholder="Seleccionar tipo">
                 <option value="1">Audio</option>
-                <option value="1">PDF</option>
-                <option value="1">Video</option>
-                <option value="1">Word</option>
-                <option value="1">Zip</option>
-                <option value="1">Otro</option>
+                <option value="2">PDF</option>
+                <option value="3">Video</option>
+                <option value="4">Word</option>
+                <option value="5">Zip</option>
+                <option value="6">Otro</option>
               </select>
             </div>
             <div class="form-group">

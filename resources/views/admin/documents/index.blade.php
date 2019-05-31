@@ -1,5 +1,3 @@
-<h3>Aquí hay documentos perros Admin.</h3>
-
 @extends('layout.admin')
 
 @section('content')
@@ -58,9 +56,9 @@
               @foreach ($documents as $key => $document)
                 <tr>
                   <th scope="row">{{ $key + 1 }}</th>
-                  <td>{{ $course->e}}</td>
-                  <td>{{ $course->type }}</td>
-                  <td>{{ $course->course->title }}</td>
+                  <td>{{ $document->name}}</td>
+                  <td>{{ $document->type }}</td>
+                  <td>{{ $document->course->title }}</td>
                   <td>
                     <a href="{{ route('documents.edit', $document->id) }}">
                       <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
@@ -70,7 +68,7 @@
                     <a href="#" class="delete-document" data-document="{{ $document->id }}">
                       <button class="btn btn btn-outline-danger btn-sm"><i class="fas fa-times"></i></button>
                     </a>
-                    <form action="{{ route('documents.destroy', $course->id) }}" id="delete-document-form-{{$document->id}}" class="d-none" method="POST">
+                    <form action="{{ route('documents.destroy', $document->id) }}" id="delete-document-form-{{$document->id}}" class="d-none" method="POST">
                       @method('DELETE')
                       @csrf
                     </form>
@@ -96,7 +94,7 @@
           backdrop: 'static',
           keyboard: false
         }).on('click', '#delete-btn', function() {
-          var form = '#delete-document-form-'+ courseId
+          var form = '#delete-document-form-'+ documentId
           $(form).submit();
         });
       });

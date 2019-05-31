@@ -23,6 +23,7 @@ class CreateDocumentsTable extends Migration
         $table->string('type');
         $table->string('duration')->nullable();
         $table->string('pages')->nullable();
+        $table->tinyInteger('priority')->default('50')->nullable();
         $table->tinyInteger('status')->default('0')->nullable();
         $table->timestamps();
       });
