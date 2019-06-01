@@ -40,7 +40,7 @@ class UsersController extends Controller
       'email' => $request->email,
       'no_encript_pass' => $pass,
       'password' => bcrypt($pass),
-      'is_admin' => $request->has('is_admin') ? $request->is_admin : '1',
+      'is_admin' => $request->has('is_admin') ? $request->is_admin : '0',
     ]);
     return redirect()->route('users.index')->with('success','Item alojado con exito la contraseña temporal del usuario es: '.$pass);
   }
@@ -64,7 +64,31 @@ class UsersController extends Controller
 
   public function update(Request $request, $id)
   {
-    
+    $validator = Validator::make(
+      $request->all(),
+      $this->rules(),
+      $this->errorMessages()
+    );
+  
+    if ($validator->fails()) {
+    return redirect()->route('users.edit', $id)->withErrors($validator)->withInput();
+    }
+
+    try {
+      $user = User::find($id);
+      $user->name = $request->name;
+      $user->lastname = $request->lastname;
+      $user->email = $request->email;
+      $user->is_admin = $request->has('is_admin') ? $request->is_admin : '0';
+     
+      if($user->save()){
+        return redirect()->route('users.index')->with('success', 'Edición exitosa');
+      } else {
+        return redirect()->route('userns.index')->with('error', 'Ocurrio un error al editar');
+      }
+    } catch (\Exception $e) {
+      return redirect()->route('users.index')->with('error', 'Ocurrio un error al editar');
+    }
   }
 
   

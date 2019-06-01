@@ -20,6 +20,7 @@ class CreateBlogsTable extends Migration
       $table->text('short_description')->nullable();
       $table->text('description')->nullable();
       $table->string('image');
+      $table->string('small_image');
       $table->integer('priority')->default(10);
       $table->integer('type')->default(1);
       $table->tinyInteger('status')->default('0')->nullable();

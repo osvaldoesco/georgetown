@@ -58,5 +58,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
     Route::resource('documents', 'Admin\DocumentsController');
     Route::resource('users', 'Admin\UsersController');
     Route::resource('about_sliders', 'Admin\AboutSlidersController');
+    Route::resource('blogs', 'Admin\BlogsController');
     
 });

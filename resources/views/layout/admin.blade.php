@@ -51,7 +51,7 @@
               <a href="{{ route('members.index') }}">Miembros</a>
             </li>
             <li>
-              <a href="#">Noticias y Eventos</a>
+              <a href="{{ route('blogs.index') }}">Noticias y Eventos</a>
             </li>
             <li>
               <a href="{{ route('courses.index') }}">Cursos</a>
