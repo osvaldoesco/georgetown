@@ -17075,6 +17075,12 @@ footer {
   box-shadow: none;
 }
 
+@media screen and (min-width: 1400px) {
+  .slide-caption {
+    left: 15%;
+  }
+}
+
 .home__events {
   padding: 60px 0px;
   background-color: #f2f0f2;

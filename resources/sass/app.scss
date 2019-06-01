@@ -337,6 +337,9 @@ footer {
   .site-button{
     box-shadow: none;
   }
+  @media screen and (min-width: 1400px) {
+    left: 15%;
+  }
 }
 
 .home__events{
