@@ -57,8 +57,8 @@
             @foreach ($users as $key => $user)
               <tr>
                 <th scope="row">{{ $key + 1 }}</th>
-                <td>{{ $user->name}}</td>
-                <td>{{ '' }} lastname</td>
+                <td>{{ $user->name }}</td>
+                <td>{{ $user->lastname }}</td>
                 <td>{{-- $user->course->title --}} Curso</td>
                 <td>{{ $user->email }}</td>
                 <td>

@@ -26,8 +26,9 @@
             </div>
           <div class="col-md-8 offset-md-2 offset-lg-0 col-lg-6 p-left-0 about-us__slider-cont">
             <div class="about-us__slider">
-              <div><img alt="slider1" src="{{ asset('img/fake/quienes-somos-slider.png') }}" /></div>
-              <div><img alt="slider2" src="{{ asset('img/fake/640x359.png') }}" /></div>
+              @foreach($about_sliders as $about_slider)
+                <div><img alt="{{ $about_slider->name }}" src="{{ asset($about_slider->image) }}" /></div>
+              @endforeach
             </div>
           </div>
         </div>

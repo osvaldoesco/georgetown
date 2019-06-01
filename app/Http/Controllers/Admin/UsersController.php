@@ -36,6 +36,7 @@ class UsersController extends Controller
     $pass = 'gt_'.$this->generateRandomString();
     $member = User::create([
       'name' => $request->name,
+      'lastname' => $request->lastname,
       'email' => $request->email,
       'no_encript_pass' => $pass,
       'password' => bcrypt($pass),
@@ -53,7 +54,12 @@ class UsersController extends Controller
   
   public function edit($id)
   {
-    
+    $user = User::find($id);
+    if ($user) {
+      return view('admin.users.edit', compact('user'));
+    }else {
+      return redirect()->route('users.index')->with('error', 'Usuario no encontrado');;
+    } 
   }
 
   public function update(Request $request, $id)
@@ -79,7 +85,7 @@ class UsersController extends Controller
     $charactersLength = strlen($characters);
     $randomString = '';
     for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
+      $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
     return $randomString;
   }
@@ -87,7 +93,7 @@ class UsersController extends Controller
   private function rules() {
     return [
       'name' => 'required',
-      // 'lastname' => 'required',
+      'lastname' => 'required',
       'email' => 'required',
     ];
   }
@@ -95,7 +101,7 @@ class UsersController extends Controller
   private function errorMessages() {
     return [
       'name.required' => 'Nombre es un campo requerido',
-      // 'lastname.required' => 'Apellido es un campo requerido',
+      'lastname.required' => 'Apellido es un campo requerido',
       'email.required' => 'Email es un campo requerido',
     ];
   }

@@ -15,7 +15,6 @@ class AddIsAdminToUsers extends Migration
     {
       Schema::table('users', function (Blueprint $table) {
         $table->tinyInteger('is_admin')->after('name')->default('0');
-        $table->string('no_encript_pass')->nullable();
       });
     }
 
@@ -28,7 +27,6 @@ class AddIsAdminToUsers extends Migration
     {
       Schema::table('users', function (Blueprint $table) {
         $table->dropColumn('is_admin');
-        $table->dropColumn('no_encript_pass');
       });
     }
 }

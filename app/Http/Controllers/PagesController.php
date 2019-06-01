@@ -8,6 +8,7 @@ use App\Member;
 use App\PrincipalSlider;
 use App\Promotion;
 use App\Course;
+use App\AboutSlider;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -21,7 +22,8 @@ class PagesController extends Controller
 
   public function about_us() {
     $members = Member::orderBy('priority')->get();
-    return view('site.pages.about_us', compact('members'));
+    $about_sliders = AboutSlider::orderBy('priority')->get();
+    return view('site.pages.about_us', compact('members', 'about_sliders'));
   }
 
   public function courses() {
@@ -35,4 +37,10 @@ class PagesController extends Controller
     }
     return redirect()->route('pages.gt_login');
   }
+
+  public function blog_detail($slug) {
+    $blog = "hola";
+    return view('site.pages.blog_detail', compact('blog'));
+  }
+
 }

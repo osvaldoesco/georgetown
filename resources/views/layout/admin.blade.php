@@ -42,6 +42,9 @@
                 <li>
                   <a href="{{ route('promotions.index') }}">Promociones</a>
                 </li>
+                <li>
+                  <a href="{{ route('about_sliders.index') }}">Quienes somos</a>
+                </li>
               </ul>
             </li>
             <li>
@@ -59,6 +62,7 @@
             <li>
               <a href="{{ route('users.index') }}">Usuarios</a>
             </li>
+            
 
           </ul>
         </nav>

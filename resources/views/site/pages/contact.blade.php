@@ -27,8 +27,7 @@
                 <input name="" placeholder="Asunto" class="form-control"/>
               </div>
               <div class="form-group">
-                <textarea placeholder="Mensaje" class="form-control" rows="4">
-                </textarea>
+                <textarea placeholder="Mensaje" class="form-control" rows="4"></textarea>
               </div>
             </form>
             <div class="green-line visible-mobile"></div>

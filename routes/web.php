@@ -44,6 +44,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/documents','PagesController@documents')->name('documents.index');
 
+Route::get('/noticias-y-eventos/{slug}','PagesController@blog_detail')->name('blog_detail');
+
 //ADMIN
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function() {
     Route::get('/gt_admin', function(){
@@ -55,4 +57,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
     Route::resource('courses', 'Admin\CoursesController');
     Route::resource('documents', 'Admin\DocumentsController');
     Route::resource('users', 'Admin\UsersController');
+    Route::resource('about_sliders', 'Admin\AboutSlidersController');
+    
 });

@@ -13,19 +13,22 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         DB::table('users')->insert([
-            'name' => 'Osvaldo Escobar',
+            'name' => 'Osvaldo',
+            'lastname' => 'Escobar',
             'email' => 'eoeg1410@gmail.com',
             'password' => bcrypt('admin123'),
             'is_admin' => '1',
         ]);
         DB::table('users')->insert([
-            'name' => 'Sue Lee',
+            'name' => 'Sue',
+            'lastname' => 'Lee',
             'email' => 'COE@GeorgeTownENGLISH.com',
             'password' => bcrypt('admin123'),
             'is_admin'=> '1',
         ]);
         DB::table('users')->insert([
-            'name' => 'Becky Torres',
+            'name' => 'Becky',
+            'lastname' => 'Torres',
             'email' => 'torres.rebeca.014@gmail.com',
             'password' => bcrypt('admin123'),
             'is_admin'=> '0',

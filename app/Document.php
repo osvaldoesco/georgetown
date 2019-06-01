@@ -13,4 +13,9 @@ class Document extends Model
     return $this->belongsTo('App\Course');
   }
 
+  public function file_name(){
+    $names = explode("/", $this->file);
+    return end($names);
+  }
+
 }

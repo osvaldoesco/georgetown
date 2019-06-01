@@ -33,44 +33,50 @@
               </div>
             </div>
             @endif
-          <a href="{{ route('documents.create') }}">
+          <a href="{{ route('about_sliders.create') }}">
             <button class="btn btn-primary float-right">
               Nuevo
             </button>
           </a>
           <h3 class="admin-title">
-            Documentos
+            Quienes Somos Slider
           </h3>
           <table class="table table-indexs">
             <thead class="thead">
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Curso</th>
-                <th scope="col">Archivo</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Prioridad</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Borrar</th>
               </tr>
             </thead>
             <tbody>
-              @foreach ($documents as $key => $document)
+              @foreach ($about_sliders as $key => $about_slider)
                 <tr>
                   <th scope="row">{{ $key + 1 }}</th>
-                  <td>{{ $document->name}}</td>
-                  <td>{{ $document->type }}</td>
-                  <td>{{ $document->course->title }}</td>
-                  <td>{{ $document->file_name() }}</td>
+                  <td>{{ $about_slider->title }}</td>
                   <td>
-                    <a href="{{ route('documents.edit', $document->id) }}">
+                    <img src="{{ asset($about_slider->image) }}" alt="{{ $about_slider->title }}" class="admin-img-preview" />
+                  </td>
+                  <td>
+                    {{ ($about_slider->status == 1) ? 'Activo' : 'Inactivo' }}
+                  </td>
+                  <td>
+                    {{ $about_slider->priority }}
+                  </td>
+                  <td>
+                    <a href="{{ route('about_sliders.edit', $about_slider->id) }}">
                       <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>
                     </a>
                   </td>
                   <td>
-                    <a href="#" class="delete-document" data-document="{{ $document->id }}">
+                    <a href="#" class="delete-about_slider" data-about_slider="{{ $about_slider->id }}">
                       <button class="btn btn btn-outline-danger btn-sm"><i class="fas fa-times"></i></button>
                     </a>
-                    <form action="{{ route('documents.destroy', $document->id) }}" id="delete-document-form-{{$document->id}}" class="d-none" method="POST">
+                    <form action="{{ route('about_sliders.destroy', $about_slider->id) }}" id="delete-about_slider-form-{{$about_slider->id}}" class="d-none" method="POST">
                       @method('DELETE')
                       @csrf
                     </form>
@@ -83,20 +89,19 @@
       </div>
     </div>
   </div>
-
 @endsection
 
 @section('scripts')
   <script type="text/javascript">
     $(document).ready(function() {
-      $('.delete-document').on('click', function(e) {
+      $('.delete-about_slider').on('click', function(e) {
         e.preventDefault();  
-        var documentId = $(this).data('document');
+        var about_sliderId = $(this).data('about_slider');
         $('#confirm').modal({
           backdrop: 'static',
           keyboard: false
         }).on('click', '#delete-btn', function() {
-          var form = '#delete-document-form-'+ documentId
+          var form = '#delete-about_slider-form-' + about_sliderId
           $(form).submit();
         });
       });

@@ -17941,3 +17941,13 @@ footer {
   }
 }
 
+/* Blog Detail */
+
+.blog-detail {
+  background-color: #e6e6e6;
+}
+
+.blog-detail .blog-content {
+  background-color: #f2f0f2;
+}
+

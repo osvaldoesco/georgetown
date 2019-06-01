@@ -46,7 +46,7 @@
             </div>
             <div class="form-group">
               <label for="priority">Prioridad</label>
-              <input type="number" class="form-control {{ $errors->has('priority') ? 'is-invalid' : '' }}" name="priority" placeholder="prioridad" value='{{ old('priority', $course->priority) }}'>
+              <input type="number" class="form-control {{ $errors->has('priority') ? 'is-invalid' : '' }}" name="priority" placeholder="prioridad" value="{{ old('priority', $course->priority) }}"/>
               @if ($errors->has('priority'))
                 <span class="invalid-feedback" role="alert">
                   <strong>{{ $errors->first('priority') }}</strong>
