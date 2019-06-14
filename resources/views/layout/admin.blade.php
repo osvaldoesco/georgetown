@@ -18,10 +18,24 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-12 header-col">
+          <div class="col-10 header-col">
             <nav class="navbar navbar-light navbar-expand-lg" id="app-header">
               <a class="navbar-brand" href="/"><img alt="logo" id="header__logo" src="{{ asset('img/logo-header.png')}}" /></a>
             </nav>
+          </div>
+          <div class="col-2 text-right">
+            <a class="logout-admin" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout') }}">
+              <div class="login-link">
+                <div class="gray-part">
+                  <img alt="login" src="{{ asset('img/login.png') }}">
+                  <label>Salir </label>
+                </div>
+                <i class="fas fa-sign-out-alt visible-desktop"></i>
+              </div>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
           </div>
         </div>
       </div>
