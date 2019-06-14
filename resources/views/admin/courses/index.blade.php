@@ -79,6 +79,10 @@
               @endforeach
             </tbody>
           </table>
+
+          <div class="text-right">
+            {{ $courses->links() }}
+          </div>
         </div>    
       </div>
     </div>

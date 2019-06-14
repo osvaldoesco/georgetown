@@ -126,10 +126,9 @@ ul ul a {
 
 .admin-card {
   background-color: white;
-  padding: 15px 0px;
   box-shadow: 1px 1px 10px solid #95a5a6;
   border-top: 2px solid #bdc3c7;
-  padding: 15px;
+  padding: 15px 15px 100px;
 }
 
 .full-content {
@@ -148,5 +147,19 @@ ul ul a {
 
 .admin-img-preview {
   width: 50px;
+}
+
+.preview-image-form,
+.preview-image-form2 {
+  width: 120px;
+  height: auto;
+  margin: 20px 0px 0px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.preview-image-form2 {
+  margin: 20px 0px -15px;
 }
 

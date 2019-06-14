@@ -25,7 +25,7 @@
         </div>
         <div class="col-12 col-lg-4">
           <div class="events-box">
-            <img alt="apertura" src="{{asset('img/estudiantes.jpg')}}" />
+            <img alt="apertura" src="{{asset('img/apertura.jpg')}}" />
             <div class="events__caption">
               <h4>ESTUDIANTES CERTIFICADOS!!!</h4>
               <p class="date">2019/03/27</p>
@@ -42,7 +42,7 @@
         </div>
         <div class="col-12 col-lg-4">
           <div class="events-box">
-            <img alt="apertura" src="{{asset('img/estudiantes.jpg')}}" />
+            <img alt="apertura" src="{{asset('img/apertura.jpg')}}" />
             <div class="events__caption">
               <h4>ESTUDIANTES CERTIFICADOS!!!</h4>
               <p class="date">2019/03/27</p>
@@ -85,7 +85,7 @@
         </div>
         <div class="col-12 col-lg-4">
           <div class="events-box">
-            <img alt="apertura" src="{{asset('img/estudiantes.jpg')}}" />
+            <img alt="apertura" src="{{asset('img/apertura.jpg')}}" />
             <div class="events__caption">
               <h4>ESTUDIANTES CERTIFICADOS!!!</h4>
               <p class="date">2019/03/27</p>
@@ -102,7 +102,7 @@
         </div>
         <div class="col-12 col-lg-4">
           <div class="events-box">
-            <img alt="apertura" src="{{asset('img/estudiantes.jpg')}}" />
+            <img alt="apertura" src="{{asset('img/apertura.jpg')}}" />
             <div class="events__caption">
               <h4>ESTUDIANTES CERTIFICADOS!!!</h4>
               <p class="date">2019/03/27</p>

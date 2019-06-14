@@ -95,6 +95,9 @@
               @endforeach
             </tbody>
           </table>
+          <div class="text-right">
+            {{ $sliders->links() }}
+          </div>
         </div>    
       </div>
     </div>

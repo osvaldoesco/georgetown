@@ -16,18 +16,22 @@
             <p class="normal-text">
               Ingrese sus datos en los siguientes campos.
             </p>
-            <form class="contact__form">
+            <form class="contact__form" method="POST" action="{{ route('contact.mail') }}">
+              @csrf
               <div class="form-group">
-                <input name="" placeholder="Nombre completo" class="form-control"/>
+                <input name="name" placeholder="Nombre completo" class="form-control"/>
               </div>
               <div class="form-group">
-                <input name="" placeholder="Correo electrónico" class="form-control"/>
+                <input name="email" placeholder="Correo electrónico" class="form-control"/>
               </div>
               <div class="form-group">
-                <input name="" placeholder="Asunto" class="form-control"/>
+                <input name="subject" placeholder="Asunto" class="form-control"/>
               </div>
               <div class="form-group">
-                <textarea placeholder="Mensaje" class="form-control" rows="4"></textarea>
+                <textarea name="comment" placeholder="Mensaje" class="form-control" rows="4"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Enviar" class="btn btn-primary"/>
               </div>
             </form>
             <div class="green-line visible-mobile"></div>

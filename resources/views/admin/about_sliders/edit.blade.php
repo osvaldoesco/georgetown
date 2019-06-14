@@ -17,8 +17,13 @@
                 </span>
               @endif
             </div>
+            <div class="form-group">
+              @if($about_slider->image)
+                <img src="{{ asset($about_slider->image) }}" alt="image" class="preview-image-form"  id="target" />
+              @endif
+            </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input {{ $errors->has('image') ? 'is-invalid' : '' }}" name="image" lang="es">
+              <input type="file" class="custom-file-input {{ $errors->has('image') ? 'is-invalid' : '' }}" name="image" lang="es" id="custom-file-input" onchange="putImage()">
               <label class="custom-file-label" for="customFileLang">Seleccionar Imagen(640x360)</label>
               @if ($errors->has('image'))
                 <span class="invalid-feedback" role="alert">
@@ -36,7 +41,7 @@
               @endif
           </div>
             <div class="form-check">
-              <input type="checkbox" class="form-check-input {{ $errors->has('status') ? 'is-invalid' : '' }}" id="status" name="status" value='1' @if (old('status')=='1' ) checked @endif>
+              <input type="checkbox" class="form-check-input {{ $errors->has('status') ? 'is-invalid' : '' }}" id="status" name="status" value='1' @if (old('status', $about_slider->status)=='1' ) checked @endif>
               <label class="form-check-label" for="status">Activo</label>
             </div>
             <br />
@@ -46,4 +51,22 @@
       </div>
     </div>
   </div>
+@endsection
+
+@section('scripts')
+  <script type="text/javascript">
+    function showImage(src, target) {
+      var fr = new FileReader();
+      fr.onload = function(){
+        target.src = fr.result;
+      }
+      fr.readAsDataURL(src.files[0]);
+    }
+
+    function putImage() {
+      var src = document.getElementById("custom-file-input");
+      var target = document.getElementById("target");
+      showImage(src, target);
+    }
+  </script>   
 @endsection

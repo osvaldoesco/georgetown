@@ -12,7 +12,8 @@ class AboutSlidersController extends Controller
    
   public function index()
   {
-      $about_sliders = AboutSlider::orderBy('priority')->get();
+      $about_sliders = AboutSlider::orderBy('created_at', 'DESC')->paginate(10);
+      // ->orderBy('bar', 'desc')
       return view('admin.about_sliders.index', compact('about_sliders'));
   }
 
@@ -58,7 +59,7 @@ class AboutSlidersController extends Controller
   {
     $about_slider = AboutSlider::find($id);
     if ($about_slider) {
-      return view('admin.about_sliders.edit', compact('promotion'));
+      return view('admin.about_sliders.edit', compact('about_slider'));
     }else {
       return redirect()->route('about_sliders.index')->with('error', 'Item no encontrado');;
     } 

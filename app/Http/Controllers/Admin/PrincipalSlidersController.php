@@ -12,7 +12,7 @@ class PrincipalSlidersController extends Controller
    
   public function index()
   {
-      $sliders = PrincipalSlider::orderBy('priority')->get();
+      $sliders = PrincipalSlider::orderBy('priority')->paginate(10);
       return view('admin.principal_slider.index', compact('sliders'));
   }
 

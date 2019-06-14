@@ -12,7 +12,7 @@ class PromotionsController extends Controller
    
     public function index()
     {
-        $promotions = Promotion::orderBy('priority')->get();
+        $promotions = Promotion::orderBy('priority')->paginate(10);
         return view('admin.promotions.index', compact('promotions'));
     }
 

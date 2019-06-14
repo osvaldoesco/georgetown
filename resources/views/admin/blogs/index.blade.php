@@ -47,6 +47,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Título</th>
                 <th scope="col">Pequeña Desc.</th>
+                <th scope="col">Tipo</th>
                 <th scope="col">Imagen</th>
                 <th scope="col">Imagen preview</th>
                 <th scope="col">Editar</th>
@@ -58,9 +59,13 @@
                 <tr>
                   <th scope="row">{{ $key + 1 }}</th>
                   <td>{{ $blog->title }}</td>
-                  <td>{{ $blog->short_description }}</td>
+                  <td>{{  $blog->limitatedDesc() }}</td>
+                  <td>{{  $blog->lypeText() }}</td>
                   <td>
                     <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }}" class="admin-img-preview" />
+                  </td>
+                  <td>
+                    <img src="{{ asset($blog->small_image) }}" alt="{{ $blog->title }}" class="admin-img-preview" />
                   </td>
                   <td>
                     <a href="{{ route('blogs.edit', $blog->id) }}">
@@ -80,6 +85,10 @@
               @endforeach
             </tbody>
           </table>
+
+          <div class="text-right">
+            {{ $blogs->links() }}
+          </div>
         </div>    
       </div>
     </div>

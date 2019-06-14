@@ -17,8 +17,11 @@
                 </span>
               @endif
             </div>
+            <div class="form-group">
+              <img src="#" alt="image1" class="preview-image-form d-none"  id="target"/>
+            </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input {{ $errors->has('picture') ? 'is-invalid' : '' }}" name="picture" lang="es" value="{{ old('picture') }}">
+              <input type="file" class="custom-file-input {{ $errors->has('picture') ? 'is-invalid' : '' }}" name="picture" lang="es" value="{{ old('picture') }}" id="custom-file-input" onchange="putImage()">
               <label class="custom-file-label" for="customFileLang">Seleccionar foto(312x312)</label>
               @if ($errors->has('picture'))
                 <span class="invalid-feedback" role="alert">
@@ -51,4 +54,23 @@
       </div>
     </div>
   </div>
+@endsection
+
+@section('scripts')
+  <script type="text/javascript">
+    function showImage(src, target) {
+      var fr = new FileReader();
+      fr.onload = function(){
+        target.src = fr.result;
+      }
+      fr.readAsDataURL(src.files[0]);
+    }
+    
+    function putImage() {
+      var src = document.getElementById("custom-file-input");
+      var target = document.getElementById("target");
+      target.classList.remove('d-none');
+      showImage(src, target);
+    }
+  </script>
 @endsection

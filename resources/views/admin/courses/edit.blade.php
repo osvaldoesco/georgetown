@@ -10,7 +10,7 @@
             @method('PATCH')
             <div class="form-group">
               <label for="name">Título</label>
-              <input type="text" class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" placeholder="Título" name="title" value='{{ old('title', $course->title) }}'>
+              <input type="text" class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" placeholder="Título" name="title" value="{{ old('title', $course->title) }}">
               @if ($errors->has('name'))
                 <span class="invalid-feedback" role="alert">
                   <strong>{{ $errors->first('title') }}</strong>
@@ -35,8 +35,13 @@
                 </span>
               @endif
             </div>
+            <div class="form-group">
+              @if($course->image)
+                <img src="{{ asset($course->image) }}" alt="image" class="preview-image-form"  id="target" />
+              @endif
+            </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input {{ $errors->has('image') ? 'is-invalid' : '' }}" name="image" lang="es" id="custom-file-input">
+              <input type="file" class="custom-file-input {{ $errors->has('image') ? 'is-invalid' : '' }}" name="image" lang="es" id="custom-file-input" onchange="putImage()">
               <label class="custom-file-label" for="customFileLang">Seleccionar Imagen(445x476)</label>
               @if ($errors->has('image'))
                 <span class="invalid-feedback" role="alert">
@@ -76,5 +81,19 @@
         $(this).next('.custom-file-label').html(fileName);
       })
     });
+
+    function showImage(src, target) {
+      var fr = new FileReader();
+      fr.onload = function(){
+        target.src = fr.result;
+      }
+      fr.readAsDataURL(src.files[0]);
+    }
+
+    function putImage() {
+      var src = document.getElementById("custom-file-input");
+      var target = document.getElementById("target");
+      showImage(src, target);
+    }
   </script>   
 @endsection

@@ -12,7 +12,7 @@ class MembersController extends Controller
    
   public function index()
   {
-    $members = Member::orderBy('priority')->get();
+    $members = Member::orderBy('priority')->paginate(5);
     return view('admin.members.index', compact('members'));
   }
 

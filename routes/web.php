@@ -45,6 +45,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/documents','PagesController@documents')->name('documents.index');
 
 Route::get('/noticias-y-eventos/{slug}','PagesController@blog_detail')->name('blog_detail');
+Route::post('/contact','MailsController@send')->name('contact.mail');
 
 //ADMIN
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function() {

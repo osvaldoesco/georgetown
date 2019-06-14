@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Blog;
 use Validator;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,7 +13,7 @@ class BlogsController extends Controller
    
   public function index()
   {
-    $blogs = Blog::orderBy('created_at', 'DESC')->get();
+    $blogs = Blog::orderBy('created_at', 'DESC')->paginate(10);
     return view('admin.blogs.index', compact('blogs'));
   }
 
@@ -24,6 +25,13 @@ class BlogsController extends Controller
   
   public function store(Request $request)
   {
+
+    $validator = Validator::make(
+      $request->all(),
+      $this->rules(),
+      $this->errorMessages()
+    );
+
     if ($validator->fails()) {
       return redirect()->route('blogs.create')->withErrors($validator->messages())->withInput();
     }
@@ -82,6 +90,7 @@ class BlogsController extends Controller
       $blog->short_description = $request->short_description;
       $blog->description = $request->description;
       $blog->status = $request->has('status') ? $request->status : '1';
+      $blog->type = $request->type;
       $blog->priority = $request->priority;
       if($request->image){
         $path = 'storage/images/blogs/';

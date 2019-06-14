@@ -85,6 +85,9 @@
               @endforeach
             </tbody>
           </table>
+          <div class="text-right">
+            {{ $promotions->links() }}
+          </div>
         </div>    
       </div>
     </div>
