@@ -20,9 +20,7 @@ Route::get('/horarios', function () {
 
 Route::get('/cursos','PagesController@courses')->name('pages.courses');
 
-Route::get('/contacto', function () {
-  return view('site.pages.contact');
-})->name('pages.contact');
+Route::get('/contacto', 'PagesController@contact')->name('pages.contact');
 
 Route::get('/quienes-somos', 'PagesController@about_us')->name('pages.about_us');
 
@@ -30,9 +28,8 @@ Route::get('/gt_login', function(){
   return view('site.pages.login');
 })->name('pages.gt_login');
 
-Route::get('/eventos-y-noticias', function () {
-  return view('site.pages.events');
-})->name('pages.events');
+Route::get('/eventos-y-noticias', 'PagesController@events')->name('pages.events');
+Route::get('/eventos-y-noticias/{slug}','PagesController@showBlog')->name('pages.blog_detail');
 
 Route::get('/servicios', function () {
   return view('site.services');
@@ -43,8 +40,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/documents','PagesController@documents')->name('documents.index');
-
-Route::get('/noticias-y-eventos/{slug}','PagesController@blog_detail')->name('blog_detail');
 Route::post('/contact','MailsController@send')->name('contact.mail');
 
 //ADMIN

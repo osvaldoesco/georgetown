@@ -34,6 +34,15 @@
                 </span>
               @endif
             </div>
+            <div class="form-group">
+              <label for="email">DUI</label>
+              <input type="text" class="form-control {{ $errors->has('dui') ? 'is-invalid' : '' }}" placeholder="Dui" name="dui" value="{{old('dui')}}">
+              @if ($errors->has('dui'))
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $errors->first('dui') }}</strong>
+                </span>
+              @endif
+            </div>
             <div class="form-check">
               <input type="checkbox" class="form-check-input" id="is_admin" name="is_admin" value='1' @if (old('is_admin')=='1' ) checked @endif>
               <label class="form-check-label" for="status">Es administrador?</label>

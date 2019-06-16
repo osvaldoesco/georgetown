@@ -40,4 +40,8 @@ class User extends Authenticatable
   public function isAdmin() {
     return $this->is_admin;
   }
+
+  public function isSuperAdmin() {
+    return $this->super_admin;
+  }
 }

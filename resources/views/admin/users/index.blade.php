@@ -49,18 +49,27 @@
               <th scope="col">Apellido</th>
               <th scope="col">Curso</th>
               <th scope="col">Correo</th>
+              <th scope="col">Cambiar C.</th>
               <th scope="col">Editar</th>
               <th scope="col">Borrar</th>
             </tr>
           </thead>
           <tbody>
             @foreach ($users as $key => $user)
+              @if ($user->isSuperAdmin() || $user->id == Auth::user()->id)
+                @continue
+              @endif
               <tr>
                 <th scope="row">{{ $key + 1 }}</th>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->lastname }}</td>
                 <td>{{-- $user->course->title --}} Curso</td>
                 <td>{{ $user->email }}</td>
+                <td>
+                  <a href="{{ route('users.edit', $user->id) }}">
+                    <button class="btn btn btn-outline-dark btn-sm"><i class="fas fa-lock"></i></button>
+                  </a>
+                </td>
                 <td>
                   <a href="{{ route('users.edit', $user->id) }}">
                     <button class="btn btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt"></i></button>

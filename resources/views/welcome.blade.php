@@ -5,19 +5,27 @@
     <div class="home__slider visible-desktop">
       @foreach ($principal_slider as $item)
         <div class="slide-item">
-          <div class="slide-caption">
-            <h3> {{ $item->title }} </h3>
-            <p>
-              {{ $item->description }}
-            </p>
-            <a href="{{ $item->link }}">
-              <button class="site-button">
-                Conocer más
-                <i class="fas fa-arrow-right"></i>
-              </button>
-            </a>
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="new-caption">
+                  <div class="slide-caption">
+                    <h3> {{ $item->title }} </h3>
+                    <p>
+                      {{ $item->description }}
+                    </p>
+                    <a href="{{ $item->link }}">
+                      <button class="site-button">
+                        Conocer más
+                        <i class="fas fa-arrow-right"></i>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <img alt="slider" src="{{ asset($item->image) }}" />
+          <img alt="slider" class="slider-desktop-image" src="{{ asset($item->image) }}" />
         </div>  
       @endforeach
     </div>
@@ -145,39 +153,28 @@
       </h3>
       <div class="container padding-top">
         <div class="row">
-          <div class="col-12 col-lg-4">
-            <div class="events-box">
-              <img alt="apertura" src="{{asset('img/apertura.jpg')}}" />
-              <div class="events__caption">
-                <h4>GRAN APERTURA!!! ornd ere efdef efef GRAN APERTURA!!! GRAN APERTURA!!!</h4>
-                <p class="date">2019/03/27</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy...</p>
-                <div class="btn-event-cont">
-                  <button class="site-button">
-                    Leer más
-                    <i class="fas fa-arrow-right"></i>
-                  </button>
+          @foreach ($events as $event)
+            <div class="col-12 col-lg-4">
+              <div class="events-box">
+              <img alt="{{$event->title}}" src="{{asset($event->small_image)}}" />
+                <div class="events__caption">
+                  <h4>{{$event->title}}</h4>
+                  <p class="date">{{ $event->getFormatedDate() }}</p>
+                  <p class="description">
+                    {{ $event->short_description }}
+                  </p>
+                  <div class="btn-event-cont">
+                    <a href="{{ route('pages.blog_detail', ['slug' => $event->slug]) }}">
+                      <button class="site-button">
+                        Leer más
+                        <i class="fas fa-arrow-right"></i>
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-4">
-            <div class="events-box">
-              <img alt="apertura" src="{{asset('img/estudiantes.jpg')}}" />
-              <div class="events__caption">
-                <h4>ESTUDIANTES CERTIFICADOS!!!</h4>
-                <p class="date">2019/03/27</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy...
-                </p>
-                <div class="btn-event-cont">
-                  <button class="site-button">
-                    Leer más
-                    <i class="fas fa-arrow-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
           <div class="col-12 col-lg-4">
             <div class="slider-events">
               @foreach ($promotions as $promotion)

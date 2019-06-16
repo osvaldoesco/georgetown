@@ -12,8 +12,12 @@ class Blog extends Model
     return substr($this->short_description, 0, 50) . '...';
   }
 
-  public function lypeText(){
+  public function typeText(){
     return $this->type == 1 ? 'Evento' : 'Noticia';
+  }
+
+  public function getFormatedDate(){
+    return date("d/m/Y", strtotime($this->created_at));;
   }
   
 }

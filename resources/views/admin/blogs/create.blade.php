@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
               <label for="name">Descripción</label>
-              <textarea class="form-control  html-editor" placeholder="..." name="description" rows="5">
+              <textarea class="form-control  html-editor normal-text" placeholder="..." name="description" rows="5">
                 {{ old('description') }}
               </textarea>
             </div>
@@ -55,7 +55,7 @@
             
             <div class="form-group">
               <label for="priority">Prioridad</label>
-              <input type="number" class="form-control" name="priority" placeholder="prioridad" value="{{ old('priority') }}">
+              <input type="number" class="form-control {{ $errors->has('priority') ? 'is-invalid' : '' }}" name="priority" placeholder="prioridad" value="{{ old('priority') }}">
             </div>
             <br />
             <div class="form-check check-cont">

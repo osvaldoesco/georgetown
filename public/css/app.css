@@ -17951,3 +17951,100 @@ footer {
   background-color: #f2f0f2;
 }
 
+.documents-table {
+  width: 100%;
+}
+
+.documents-table th {
+  padding: 10px 15px;
+  color: #476fb3;
+}
+
+.documents-table td {
+  margin-top: 3px;
+  padding: 10px 15px;
+  background-color: white;
+}
+
+.documents-table tbody tr {
+  border-top: 3px solid #e6e6e6;
+}
+
+.documents-table tbody tr:nth-child(odd) {
+  border-left: 2px solid #476fb3;
+}
+
+.documents-table tbody tr:nth-child(even) {
+  border-left: 2px solid #49dfc7;
+}
+
+.documents-table i {
+  color: #ff1751;
+}
+
+.floating-social-networks {
+  position: fixed;
+  top: 45%;
+  left: 0px;
+}
+
+.floating-social-networks .footer__social {
+  float: none;
+  padding: 0px;
+}
+
+.padding-vertical-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blog-pagination-cont .pagination {
+  justify-content: center;
+}
+
+.blog-pagination-cont .pagination li a {
+  background-color: transparent;
+  color: #808080;
+}
+
+.blog-pagination-cont .pagination li.active span {
+  background-color: transparent;
+  color: red;
+  font-weight: bold;
+  border: 0;
+}
+
+.blog-pagination-cont .pagination li:first-child a,
+.blog-pagination-cont .pagination li:last-child a {
+  color: #ff1751;
+  background-color: white;
+}
+
+.documents-cont {
+  background-color: #e6e6e6;
+}
+
+.slider-desktop-image {
+  margin-top: -15px;
+}
+
+.documents-section-title {
+  text-transform: uppercase;
+  color: #808080;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.documents-section-title span {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.login-cont .home__students {
+  padding-bottom: 10px;
+}
+
+.w-100p {
+  width: 100%;
+}
+

@@ -112,6 +112,28 @@
         </div>
       </div>
     </footer>
+
+    <!-- Floating social netwoks -->
+    <div class="floating-social-networks">
+      <ul class="footer__social">
+        <li class="social-item social-insta">
+          <a href="https://www.instagram.com/georgetown.english/?hl=es-la" >
+            <img alt="insta" src="{{ asset('img/insta.png')}}" />
+          </a>
+        </li>
+        <li class="social-item social-fb">
+          <a href="https://www.facebook.com/Georgetown-English-Academy-351189995515981/" >
+            <img alt="fb" src="{{ asset('img/fb.png')}}" />
+          </a>
+        </li>
+        <li class="social-item social-mail">
+          <a href="mailto:info@GeorgeTownENGLISH.com" >
+            <img alt="mail" src="{{ asset('img/mail.png')}}" />
+          </a>
+        </li>
+      <ul>
+    </div>
+
     <script src="{{ asset('js/app.js')}}"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </body>

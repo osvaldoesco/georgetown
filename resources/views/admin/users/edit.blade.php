@@ -36,6 +36,15 @@
               @endif
             </div>
             <div class="form-group">
+              <label for="email">DUI</label>
+              <input type="text" class="form-control {{ $errors->has('dui') ? 'is-invalid' : '' }}" placeholder="Dui" name="dui" value="{{old('dui', $user->dui)}}">
+              @if ($errors->has('dui'))
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $errors->first('dui') }}</strong>
+                </span>
+              @endif
+            </div>
+            <div class="form-group">
               <label for="no_encript_pass">Contraseña(Solo al generar usuario):</label>
               <input type="text" class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" placeholder="Contraseña generada" name="no_encript_pass" value="{{old('no_encript_pass', $user->no_encript_pass)}}">
               @if ($errors->has('no_encript_pass'))

@@ -38,6 +38,7 @@ class UsersController extends Controller
       'name' => $request->name,
       'lastname' => $request->lastname,
       'email' => $request->email,
+      'dui' => $request->dui,
       'no_encript_pass' => $pass,
       'password' => bcrypt($pass),
       'is_admin' => $request->has('is_admin') ? $request->is_admin : '0',
@@ -79,6 +80,7 @@ class UsersController extends Controller
       $user->name = $request->name;
       $user->lastname = $request->lastname;
       $user->email = $request->email;
+      $user->dui = $request->dui;
       $user->is_admin = $request->has('is_admin') ? $request->is_admin : '0';
      
       if($user->save()){

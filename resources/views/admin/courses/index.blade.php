@@ -70,7 +70,7 @@
                     <a href="#" class="delete-course" data-course="{{ $course->id }}">
                       <button class="btn btn btn-outline-danger btn-sm"><i class="fas fa-times"></i></button>
                     </a>
-                    <form action="{{ route('courses.destroy', $course->id) }}" id="delete-courses-form-{{$course->id}}" class="d-none" method="POST">
+                    <form action="{{ route('courses.destroy', $course->id) }}" id="delete-course-form-{{$course->id}}" class="d-none" method="POST">
                       @method('DELETE')
                       @csrf
                     </form>

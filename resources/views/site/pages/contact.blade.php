@@ -28,10 +28,18 @@
                 <input name="subject" placeholder="Asunto" class="form-control"/>
               </div>
               <div class="form-group">
+                <select class="form-control" name="course">
+                  @foreach ($courses as $course)
+                <option value="{{ $course->title }}" >{{ $course->title }}</option>
+                  @endforeach
+                </select>
+              </div>
+              
+              <div class="form-group">
                 <textarea name="comment" placeholder="Mensaje" class="form-control" rows="4"></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Enviar" class="btn btn-primary"/>
+                <input type="submit" value="Enviar" class="site-button" style="border-radius: 14px;"/>
               </div>
             </form>
             <div class="green-line visible-mobile"></div>

@@ -1,20 +1,22 @@
-@extends('layout.site', ['page' => 'blog_detail'])
+@extends('layout.site', ['page' => 'events'])
 
 @section('content')
   <section class="blog-detail">
     <div class="blog-content padding-vertical">
       <div class="container  ">
         <div class="row">
-          <div class="col-md-6">
-            Imagen
+          <div class="col-md-12 padding-vertical-20">
+            <h3 class="title-decorated  text-center">
+              {{ $event->title }}
+            </h3>
           </div>
-          <div class="col-md-6">
-            Titulo
+          <div class="col-md-12 padding-vertical-20 text-center">
+            <img alt="{{ $event->name }}" src="{{ asset($event->image) }}" />
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            Descripción
+          <div class="col-md-12 padding-vertical-20 normal-text">
+            {!!$event->description !!}
           </div>
         </div>
       </div>

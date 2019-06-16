@@ -1086,3 +1086,100 @@ footer {
     background-color: #f2f0f2;
   }
 }
+
+.documents-table{
+  width: 100%;
+  th{
+    padding: 10px 15px;
+    color: $blue;
+  }
+  td{
+    margin-top: 3px;
+    padding: 10px 15px;
+    background-color: white;
+  }
+  tbody tr{
+    border-top: 3px solid #e6e6e6;
+  }
+  
+  tbody tr:nth-child(odd){
+    border-left: 2px solid $blue;
+  }
+  tbody tr:nth-child(even){
+    border-left: 2px solid $green;    
+  }
+  i{
+    color: $red;
+  }
+
+}
+
+.floating-social-networks{
+  position: fixed;
+  top: 45%;
+  left: 0px;
+  .footer__social{
+    float: none;
+    padding: 0px;
+  }
+}
+
+.padding-vertical-20{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blog-pagination-cont{
+  .pagination{
+    justify-content: center;
+    li{
+      a{
+        background-color: transparent;
+        color: #808080;
+      }
+    }
+    li.active{
+      span{
+        background-color: transparent;
+        color: red;
+        font-weight: bold;
+        border: 0;
+      }
+    }
+    li:first-child, li:last-child{
+      a{
+        color: $red;
+        background-color: white;
+      }
+    }
+  }
+}
+
+.documents-cont{
+  background-color: #e6e6e6;
+}
+
+.slider-desktop-image{
+  margin-top: -15px;
+}
+
+.documents-section-title{
+  text-transform: uppercase;
+  color: #808080;
+  font-size: 20px;
+  font-weight: bold;
+  span{
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+.login-cont{
+  .home__students{
+    padding-bottom: 10px;
+  }
+}
+
+.w-100p{
+  width: 100%;
+}

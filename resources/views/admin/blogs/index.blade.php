@@ -60,7 +60,7 @@
                   <th scope="row">{{ $key + 1 }}</th>
                   <td>{{ $blog->title }}</td>
                   <td>{{  $blog->limitatedDesc() }}</td>
-                  <td>{{  $blog->lypeText() }}</td>
+                  <td>{{  $blog->typeText() }}</td>
                   <td>
                     <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }}" class="admin-img-preview" />
                   </td>
@@ -76,7 +76,7 @@
                     <a href="#" class="delete-blog" data-blog="{{ $blog->id }}">
                       <button class="btn btn btn-outline-danger btn-sm"><i class="fas fa-times"></i></button>
                     </a>
-                    <form action="{{ route('blogs.destroy', $blog->id) }}" id="delete-blogs-form-{{$blog->id}}" class="d-none" method="POST">
+                    <form action="{{ route('blogs.destroy', $blog->id) }}" id="delete-blog-form-{{$blog->id}}" class="d-none" method="POST">
                       @method('DELETE')
                       @csrf
                     </form>

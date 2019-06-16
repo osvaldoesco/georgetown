@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use \Auth;
 use App\Member;
+use App\Blog;
 use App\PrincipalSlider;
 use App\Promotion;
 use App\Course;
@@ -17,7 +18,8 @@ class PagesController extends Controller
   public function home() {
     $principal_slider = PrincipalSlider::where('status', 1)->orderBy('priority')->get();
     $promotions = Promotion::where('status', 1)->orderBy('priority')->get();
-    return view('welcome', compact('principal_slider', 'promotions'));
+    $events = Blog::where('status', 1)->orderBy('priority')->take(2)->get();
+    return view('welcome', compact('principal_slider', 'promotions', 'events'));
   }
 
   public function about_us() {
@@ -33,7 +35,8 @@ class PagesController extends Controller
 
   public function documents() {
     if(Auth::check()){
-      return view('site.pages.documents');
+      $courses = Course::with('documents')->where('status', 1)->get();
+      return view('site.pages.documents', compact('courses'));
     }
     return redirect()->route('pages.gt_login');
   }
@@ -43,4 +46,18 @@ class PagesController extends Controller
     return view('site.pages.blog_detail', compact('blog'));
   }
 
+  public function events(){
+    $events = Blog::where('type', 1)->orderBy('priority')->paginate(3);
+    $news = Blog::where('type', 2)->orderBy('priority')->paginate(3);
+    return view('site.pages.events', compact('events', 'news'));
+  }
+
+  public function showBlog($slug){
+    $event = Blog::where('slug', $slug)->firstOrFail();
+    return view('site.pages.blog_detail', compact('event'));
+  }
+  public function contact(){
+    $courses = Course::where('status', 1)->get();
+    return view('site.pages.contact', compact('courses'));
+  }
 }
