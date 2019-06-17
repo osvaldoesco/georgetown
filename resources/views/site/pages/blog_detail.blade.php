@@ -24,40 +24,26 @@
     <div class="blog-related padding-vertical">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-4">
-            <div class="events-box">
-              <img alt="apertura" src="{{asset('img/estudiantes.jpg')}}" />
-              <div class="events__caption">
-                <h4>ESTUDIANTES CERTIFICADOS!!!</h4>
-                <p class="date">2019/03/27</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy...
-                </p>
-                <div class="btn-event-cont">
-                  <button class="site-button">
-                    Leer más
-                    <i class="fas fa-arrow-right"></i>
-                  </button>
+          @foreach ($related as $new)
+            <div class="col-12 col-lg-4">
+              <div class="events-box">
+                <img alt="apertura" src="{{ asset($new->small_image) }}" />
+                <div class="events__caption">
+                <h4>{{ $new->title }}</h4>
+                <p class="date">{{ $new->getFormatedDate() }}</p>
+                  <p class="description">{{ $new->short_description }}</p>
+                  <div class="btn-event-cont">
+                    <a href="{{ route('pages.blog_detail', ['slug' => $new->slug]) }}">
+                      <button class="site-button">
+                        Leer más
+                        <i class="fas fa-arrow-right"></i>
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-4">
-            <div class="events-box">
-              <img alt="apertura" src="{{asset('img/estudiantes.jpg')}}" />
-              <div class="events__caption">
-                <h4>ESTUDIANTES CERTIFICADOS!!!</h4>
-                <p class="date">2019/03/27</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy...
-                </p>
-                <div class="btn-event-cont">
-                  <button class="site-button">
-                    Leer más
-                    <i class="fas fa-arrow-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>

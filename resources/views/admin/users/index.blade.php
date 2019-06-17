@@ -59,6 +59,9 @@
               @if ($user->isSuperAdmin() || $user->id == Auth::user()->id)
                 @continue
               @endif
+              @if (!Auth::user()->isSuperAdmin() && $user->isAdmin())
+                @continue
+              @endif
               <tr>
                 <th scope="row">{{ $key + 1 }}</th>
                 <td>{{ $user->name }}</td>
@@ -66,7 +69,7 @@
                 <td>{{-- $user->course->title --}} Curso</td>
                 <td>{{ $user->email }}</td>
                 <td>
-                  <a href="{{ route('users.edit', $user->id) }}">
+                  <a href="{{ route('users.new_password', $user->id) }}">
                     <button class="btn btn btn-outline-dark btn-sm"><i class="fas fa-lock"></i></button>
                   </a>
                 </td>

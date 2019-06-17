@@ -54,7 +54,8 @@ class PagesController extends Controller
 
   public function showBlog($slug){
     $event = Blog::where('slug', $slug)->firstOrFail();
-    return view('site.pages.blog_detail', compact('event'));
+    $related = Blog::where('type', $event->type)->limit(3)->get();
+    return view('site.pages.blog_detail', compact('event', 'related'));
   }
   public function contact(){
     $courses = Course::where('status', 1)->get();

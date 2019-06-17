@@ -19,13 +19,13 @@
             <form class="contact__form" method="POST" action="{{ route('contact.mail') }}">
               @csrf
               <div class="form-group">
-                <input name="name" placeholder="Nombre completo" class="form-control"/>
+                <input name="name" placeholder="Nombre completo" class="form-control" required/>
               </div>
               <div class="form-group">
-                <input name="email" placeholder="Correo electrónico" class="form-control"/>
+                <input name="email" placeholder="Correo electrónico" class="form-control" required/>
               </div>
               <div class="form-group">
-                <input name="subject" placeholder="Asunto" class="form-control"/>
+                <input name="subject" placeholder="Asunto" class="form-control" required/>
               </div>
               <div class="form-group">
                 <select class="form-control" name="course">
@@ -36,10 +36,13 @@
               </div>
               
               <div class="form-group">
-                <textarea name="comment" placeholder="Mensaje" class="form-control" rows="4"></textarea>
+                <textarea name="comment" placeholder="Mensaje" class="form-control" rows="4" required></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Enviar" class="site-button" style="border-radius: 14px;"/>
+                <button type="submit" class="site-button">
+                  Enviar
+                  <i class="fas fa-arrow-right"></i>
+                </button>
               </div>
             </form>
             <div class="green-line visible-mobile"></div>

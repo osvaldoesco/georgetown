@@ -19,32 +19,34 @@
         <div class="col-12">
           @if(Auth::check())
             @foreach ($courses as $course)
-              <h3 class="title-decorated text-center padding-vertical">
-                {{ $course->title }}
-              </h3>
+              @if(count($course->documents) > 0)
+                <h3 class="title-decorated text-center padding-vertical">
+                  {{ $course->title }}
+                </h3>
 
-              <table class="documents-table">
-                <thead>
-                  <tr>
-                    <th width="70%">Archivos</th>
-                    <th width="15%">Tipo</th>
-                    <th width="15%">Descargar</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @foreach ($course->documents as $document)
+                <table class="documents-table">
+                  <thead>
                     <tr>
-                      <td>{{ $document->name }}</td>
-                      <td><i class="fas {{ $document->getClassIcon() }}"></i></td>
-                      <td class="text-center">
-                        <a href="{{ asset($document->file) }}" download>
-                          <i class="fas fa-arrow-down"></i>
-                        </a>
-                      </td>
+                      <th width="70%">Archivos</th>
+                      <th width="15%">Tipo</th>
+                      <th width="15%">Descargar</th>
                     </tr>
-                  @endforeach
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    @foreach ($course->documents as $document)
+                      <tr>
+                        <td>{{ $document->name }}</td>
+                        <td><i class="fas {{ $document->getClassIcon() }}"></i></td>
+                        <td class="text-center">
+                          <a href="{{ asset($document->file) }}" download>
+                            <i class="fas fa-arrow-down"></i>
+                          </a>
+                        </td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              @endif
             @endforeach
           @else
             <p class="text-center"> Error al cargar material de apoyo </p>

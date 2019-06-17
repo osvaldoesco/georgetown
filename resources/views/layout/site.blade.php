@@ -1,9 +1,20 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!doctype html >
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GeorgeTown English</title>
+    <meta 
+      name="description" 
+      content="Ayudamos a jóvenes y adultos a certificarse con la 
+      mayor puntuación en pruebas TOEIC, TOEFL, SAT y 
+      PRACTICAL ENGLISH en El Salvador."
+    >
+    <meta 
+      name="keywords" 
+      content="English Academy,academia de ingles,English,Toeic,Toefl,IBT,ITP,TOEFL,SAT, 
+      PRACTICAL ENGLISH, ingles El Salvador"
+    >
 
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" />
     <link rel="icon" type="image/vnd.microsoft.icon" href="{{ asset('img/favicon.ico') }}">
@@ -114,7 +125,7 @@
     </footer>
 
     <!-- Floating social netwoks -->
-    <div class="floating-social-networks">
+    <div class="floating-social-networks d-none d-md-block">
       <ul class="footer__social">
         <li class="social-item social-insta">
           <a href="https://www.instagram.com/georgetown.english/?hl=es-la" >

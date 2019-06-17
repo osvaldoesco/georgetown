@@ -58,4 +58,6 @@ Route::group(['prefix' => 'gt_admin', 'middleware' => ['auth', 'admin']], functi
   Route::resource('users', 'Admin\UsersController');
   Route::resource('about_sliders', 'Admin\AboutSlidersController');
   Route::resource('blogs', 'Admin\BlogsController');
+  Route::get('/users/{id}/change_password', 'Admin\UsersController@newPassword')->name('users.new_password');
+  Route::post('/users/{id}/change_password', 'Admin\UsersController@updatePassword')->name('users.update_password');  
 });

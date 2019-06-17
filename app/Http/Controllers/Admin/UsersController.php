@@ -72,7 +72,7 @@ class UsersController extends Controller
     );
   
     if ($validator->fails()) {
-    return redirect()->route('users.edit', $id)->withErrors($validator)->withInput();
+      return redirect()->route('users.edit', $id)->withErrors($validator)->withInput();
     }
 
     try {
@@ -104,6 +104,33 @@ class UsersController extends Controller
     return redirect()->route('users.index')->with('error','Error al eliminar Registro');   
   }
 
+  public function newPassword($id){
+    return view('admin.users.new_password', compact('id'));
+  }
+
+  public function updatePassword(Request $request, $id){
+    $validator = Validator::make(
+      $request->all(),
+      $this->passwordRules(),
+      $this->errorMessages()
+    );
+    if ($validator->fails()) {
+      return redirect()->route('users.new_password', $id)->withErrors($validator)->withInput();
+    }
+    if ($request->password != $request->confirmation){
+      $validator->errors()->add('password', 'Los campos no coinciden');
+      return redirect()->route('users.new_password', $id)->withErrors($validator)->withInput();
+    }
+    try {
+      $user = User::find($id);
+      $user->password = bcrypt($request->password);
+      $user->save();
+    } catch(\Exception $e){
+      return redirect()->route('users.index')->with('error', 'Ocurrio un error al editar la contraseña');
+    }
+    return redirect()->route('users.index')->with('success', 'Cambio de contraseña exitoso');
+  }
+
 
   //Functionallity
   function generateRandomString($length = 5) {
@@ -124,11 +151,25 @@ class UsersController extends Controller
     ];
   }
 
+  private function passwordRules() {
+    return [
+      'password' => 'required',
+      'confirmation' => 'required',
+    ];
+  }
+
   private function errorMessages() {
     return [
       'name.required' => 'Nombre es un campo requerido',
       'lastname.required' => 'Apellido es un campo requerido',
       'email.required' => 'Email es un campo requerido',
+    ];
+  }
+
+  private function errorPasswordMessages() {
+    return [
+      'password.required' => 'Contraña es un campo requerido',
+      'confirmation.required' => 'Confirmación de con es un campo requerido',
     ];
   }
 }
