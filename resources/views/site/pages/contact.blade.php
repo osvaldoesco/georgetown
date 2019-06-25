@@ -69,10 +69,12 @@
         Ingrese a nuestro sistema para poder obtener<br>
         nuestras guias según el curso que pertenezca.
       </p>    
-      <button class="site-button">
-        Ir al login estudiantil 
-        <i class="fas fa-arrow-right"></i>
-      </button>
+      <a href="{{ Auth::check() ? '/documents' : '/gt_login' }}" >
+        <button class="site-button">
+          {{ Auth::check() ? 'Ir a material de apoyo' : 'Ir al login estudiantil' }}
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </a>
     </div>
     <script>
       var map;

@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
   </head>
-  <body>
+  <body class="site-body">
     <header>
       <div class="container">
         <div class="row">
@@ -91,7 +91,7 @@
           <div class="col-12 col-lg-8 text-center">
             <div class="footer__menu">
               <div><a href="{{ route('pages.about_us') }}">¿Quienes somos?</a></div>
-              <div><a href="{{ route('pages.services') }}">Nuestros servicios</a></div>
+              <div><a href="{{route('pages.courses') }}">Nuestros servicios</a></div>
             <div><a href="{{ route('pages.events') }}">Eventos y Noticias</a></div>
               <div><a href="{{ route('pages.contact') }}">Contáctanos</a></div>
               <div class="div-clear-mb"></div>
@@ -104,17 +104,17 @@
           <div class="col-12 col-lg-2 text-right">
             <ul class="footer__social">
               <li class="social-item social-insta">
-                <a href="https://www.instagram.com/georgetown.english/?hl=es-la" >
+                <a href="https://www.instagram.com/georgetown.english/?hl=es-la" target="_blank">
                   <img alt="insta" src="{{ asset('img/insta.png')}}" />
                 </a>
               </li>
               <li class="social-item social-fb">
-                <a href="https://www.facebook.com/Georgetown-English-Academy-351189995515981/" >
+                <a href="https://www.facebook.com/Georgetown-English-Academy-351189995515981/" target="_blank">
                   <img alt="fb" src="{{ asset('img/fb.png')}}" />
                 </a>
               </li>
               <li class="social-item social-mail">
-                <a href="mailto:info@GeorgeTownENGLISH.com" >
+                <a href="mailto:info@GeorgeTownENGLISH.com" target="_blank">
                   <img alt="mail" src="{{ asset('img/mail.png')}}" />
                 </a>
               </li>
@@ -128,17 +128,17 @@
     <div class="floating-social-networks d-none d-md-block">
       <ul class="footer__social">
         <li class="social-item social-insta">
-          <a href="https://www.instagram.com/georgetown.english/?hl=es-la" >
+          <a href="https://www.instagram.com/georgetown.english/?hl=es-la" target="_blank">
             <img alt="insta" src="{{ asset('img/insta.png')}}" />
           </a>
         </li>
         <li class="social-item social-fb">
-          <a href="https://www.facebook.com/Georgetown-English-Academy-351189995515981/" >
+          <a href="https://www.facebook.com/Georgetown-English-Academy-351189995515981/" target="_blank">
             <img alt="fb" src="{{ asset('img/fb.png')}}" />
           </a>
         </li>
         <li class="social-item social-mail">
-          <a href="mailto:info@GeorgeTownENGLISH.com" >
+          <a href="mailto:info@GeorgeTownENGLISH.com" target="_blank">
             <img alt="mail" src="{{ asset('img/mail.png')}}" />
           </a>
         </li>

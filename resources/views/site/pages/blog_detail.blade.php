@@ -11,7 +11,7 @@
             </h3>
           </div>
           <div class="col-md-12 padding-vertical-20 text-center">
-            <img alt="{{ $event->name }}" src="{{ asset($event->image) }}" />
+            <img alt="{{ $event->name }}" src="{{ asset($event->image) }}" class="blog-image" />
           </div>
         </div>
         <div class="row">

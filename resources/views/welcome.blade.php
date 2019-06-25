@@ -54,98 +54,157 @@
         </h3>
         <div class="container padding-vertical">
             <div class="row">
+
               <div class="col-12 col-md-6 col-lg-3 square col-p-10 services-cont">
                 <div class="services-block">
                   <img alt="decorate" src="{{ asset('img/course-decoration2.png') }}" class="course-decoration" />
-                  <h4 class="box-title">
-                    CURSOS PARA 
-                    CERTIFICACIÓN
-                    TOEIC.
-                  </h4>
-                  <p class="box-text">
-                    Ayudamos a generar una excelente 
-                    puntuación en esta prueba que mide 
-                    sus capacidades y competencias 
-                    en el idioma.
-                  </p>
-                  <i class="fas fa-arrow-right"></i>
+                  @if($course1)
+                    <h4 class="box-title">
+                      <a href="{{route('pages.course_detail', $course1->id) }}">{{ $course1->section_title }}</a>
+                    </h4>
+                    <p class="box-text">
+                      {{ $course1->short_description }}
+                    </p>
+                    <a href="{{route('pages.course_detail', $course1->id) }}">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  @else
+                    <h4 class="box-title">
+                        CURSOS PARA 
+                        CERTIFICACIÓN
+                        TOEIC.
+                      </h4>
+                      <p class="box-text">
+                        Ayudamos a generar una excelente 
+                        puntuación en esta prueba que mide 
+                        sus capacidades y competencias 
+                        en el idioma.
+                      </p>
+                      <i class="fas fa-arrow-right"></i>
+                  @endif
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3 square col-p-10 services-cont">
                 <div class="services-block--green">
                   <img alt="decorate" src="{{ asset('img/course-decoration.png') }}" class="course-decoration" />
-                  <h4 class="box-title">
-                    CURSOS PARA 
-                    CERTIFICACIÓN
-                    TOEFL (ITP y IBT).
-                  </h4>
-                  <p class="box-text">
-                    Le enseñamos como  obtener una 
-                    puntuación excelente en esta prueba 
-                    estandarizada de dominio del idioma 
-                    ingles estadounidense.  
-                  </p>
-                  <i class="fas fa-arrow-right"></i>
+                  @if($course2)
+                    <h4 class="box-title">
+                      <a href="{{route('pages.course_detail', $course2->id) }}">{{ $course2->section_title }}</a>
+                    </h4>
+                    <p class="box-text">
+                      {{ $course2->short_description }}
+                    </p>
+                    <a href="{{route('pages.course_detail', $course2->id) }}">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  @else
+                    <h4 class="box-title">
+                      CURSOS PARA 
+                      CERTIFICACIÓN
+                      TOEFL (ITP y IBT).
+                    </h4>
+                    <p class="box-text">
+                      Le enseñamos como  obtener una 
+                      puntuación excelente en esta prueba 
+                      estandarizada de dominio del idioma 
+                      ingles estadounidense.  
+                    </p>
+                    <i class="fas fa-arrow-right"></i>
+                  @endif
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3 square col-p-10 services-cont">
                 <div class="services-block--gray">
                   <img alt="decorate" src="{{ asset('img/course-decoration.png') }}" class="course-decoration" />
-                  <h4 class="box-title">
-                    CURSOS PARA 
-                    CERTIFICACIÓN
-                    SAT.
-                  </h4>
-                  <p class="box-text">
-                    Le enseñamos y ayudamos a obtener 
-                    el mayor puntaje en esta prueba 
-                    de admisión aceptado por las 
-                    universidades de Estados Unidos.  
-                  </p>
-                  <i class="fas fa-arrow-right"></i>
+                  @if($course3)
+                    <h4 class="box-title">
+                      <a href="{{route('pages.course_detail', $course3->id) }}">{{ $course3->section_title }}</a>
+                    </h4>
+                    <p class="box-text">
+                      {{ $course3->short_description }}
+                    </p>
+                    <a href="{{route('pages.course_detail', $course3->id) }}">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  @else
+                    <h4 class="box-title">
+                      CURSOS PARA 
+                      CERTIFICACIÓN
+                      SAT.
+                    </h4>
+                    <p class="box-text">
+                      Le enseñamos y ayudamos a obtener 
+                      el mayor puntaje en esta prueba 
+                      de admisión aceptado por las 
+                      universidades de Estados Unidos.  
+                    </p>
+                    <i class="fas fa-arrow-right"></i>
+                  @endif
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3 square col-p-10 services-cont">
                 <div class="services-block--yellow">
                   <img alt="decorate" src="{{ asset('img/course-decoration.png') }}" class="course-decoration" />
-                  <h4 class="box-title">
-                    CURSOS PARA 
-                    CERTIFICACIÓN
-                    GRAMMAR.
-                  </h4>
-                  <p class="box-text">
-                    Le enseñamos como obtener un 
-                    alto puntaje en la prueba para 
-                    comprobar sus altos conocimientos en 
-                    gramática  inglesa,  fácil y rápido.    
-                  </p>
-                  <i class="fas fa-arrow-right"></i>
+                  @if($course4)
+                    <h4 class="box-title">
+                      <a href="{{route('pages.course_detail', $course4->id) }}">{{ $course4->section_title }}</a>
+                    </h4>
+                    <p class="box-text">
+                      {{ $course4->short_description }}
+                    </p>
+                    <a href="{{route('pages.course_detail', $course4->id) }}">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  @else
+                    <h4 class="box-title">
+                      CURSOS PARA 
+                      CERTIFICACIÓN
+                      GRAMMAR.
+                    </h4>
+                    <p class="box-text">
+                      Le enseñamos como obtener un 
+                      alto puntaje en la prueba para 
+                      comprobar sus altos conocimientos en 
+                      gramática  inglesa,  fácil y rápido.    
+                    </p>
+                    <i class="fas fa-arrow-right"></i>
+                  @endif
                 </div>
               </div> 
             </div>
             <div class="row kids-course">
-              <div class="col-md-6 p-right-5">
-                <div class="kids-img">
-                <img alt="kids classes" src="{{ asset('img/kids.png') }}" />
-                </div>
-              </div>
-              <div class="col-md-6 vertical-center p-left-5">
-                <div class="kids-link-cont">
-                  <i class="fas fa-arrow-right"></i>
-                  <img alt="decorate" src="{{ asset('img/course-decoration2.png') }}" class="course-decoration" />
-                  <div class="kids-link">
-                    <h3>ENGLISH CLASSES</h3>
-                    <h3 class="second">For children</h3>
+              @if($course5)
+                <div class="col-md-6 p-right-5">
+                  <div class="kids-img">
+                    <a href="{{route('pages.course_detail', $course5->id) }}">
+                      <img alt="kids classes" src="{{ asset('img/kids.png') }}" />
+                    </a>
                   </div>
                 </div>
-              </div>
+                <div class="col-md-6 vertical-center p-left-5">
+                  <div class="kids-link-cont">
+                    <a href="{{route('pages.course_detail', $course5->id) }}">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <img alt="decorate" src="{{ asset('img/course-decoration2.png') }}" class="course-decoration" />
+                    <div class="kids-link">
+                      <a href="{{route('pages.course_detail', $course5->id) }}">
+                        <h3>ENGLISH CLASSES</h3>
+                        <h3 class="second for-kids-font">For children</h3>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              @endif
             </div>
 
           </div>
-        <button class="site-button">
+        <a href="{{ route('pages.methodology')}}">
+          <button class="site-button">
             Vea nuestra metodología
-          <i class="fas fa-arrow-right"></i>
-        </button>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </a>
       </div>
     <div class="home__events">
       <h3 class="title-decorated">
@@ -185,10 +244,12 @@
         </div>
       </div>
       <div class="button-cont-less">
-        <button class="site-button">
-          Vea nuestra metodología
-          <i class="fas fa-arrow-right"></i>
-        </button>
+        <a href="{{ route('pages.methodology')}}">
+          <button class="site-button">
+            Vea nuestra metodología
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </a>
       </div>
     </div>     
   </div>
@@ -198,10 +259,12 @@
     <p class="normal-text">
       Ingrese a nuestro sistema para poder obtener<br>
       nuestras guias según el curso que pertenezca.
-    </p>           
-    <button class="site-button">
-      Ir al login estudiantil 
-      <i class="fas fa-arrow-right"></i>
-    </button>
+    </p>  
+    <a href="{{ Auth::check() ? '/documents' : '/gt_login' }}" >
+      <button class="site-button">
+        {{ Auth::check() ? 'Ir a material de apoyo' : 'Ir al login estudiantil' }}
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </a>
   </section>
 @endsection

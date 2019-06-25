@@ -45,11 +45,20 @@ $lato: 'Lato', sans-serif;
 body{
   font-family: $lato;
 }
+.site-body{
+  padding-top: 100px;
+}
 
 header {
   border-top: 5px solid $gray;
   background-color: white;
   padding: 5px 0px;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
 }
 
 .navbar-toggler{
@@ -488,6 +497,7 @@ footer {
   i{
     font-size: 30px;
     text-shadow: 1px 1px 10px #999999;
+    color: white !important;
   }
 }
 .course-decoration{
@@ -518,7 +528,7 @@ footer {
   @extend .services-block;
   background-color: $yellow;
   p, h4{
-   color: #808080;
+   color: #808080 !important;
   }
 }
 
@@ -1050,9 +1060,10 @@ footer {
 }
 
 .kids-link{
-  color: white;
+  color: white !important;
   padding-left: 100px;
   h3{
+    color: white !important;
     font-size: 26px;
     text-align: left;
     font-weight: 700;
@@ -1182,4 +1193,36 @@ footer {
 
 .w-100p{
   width: 100%;
+}
+
+.blog-image{
+  @media screen and (max-width: 992px){
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@font-face {
+  font-family: 'Lobster Regular';
+  src: url('/fonts/Lobster/Lobster-Regular.ttf') format('truetype');
+}
+
+.for-kids-font{
+  font-family: 'Lobster Regular' !important;
+  font-size: 33px !important;
+}
+
+.course-detail{
+  background-color: #f2f0f2;
+}
+
+.box-title a{
+  color: white !important;
+}
+
+.events-box {
+  transition: 0.3s;
+}
+.events-box:hover {
+  box-shadow: 10px 10px 10px #cccccc;
 }

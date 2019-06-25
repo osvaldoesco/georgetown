@@ -19,7 +19,13 @@ class PagesController extends Controller
     $principal_slider = PrincipalSlider::where('status', 1)->orderBy('priority')->get();
     $promotions = Promotion::where('status', 1)->orderBy('priority')->get();
     $events = Blog::where('status', 1)->orderBy('priority')->take(2)->get();
-    return view('welcome', compact('principal_slider', 'promotions', 'events'));
+    $course1 = Course::where('section', 1)->first();
+    $course2 = Course::where('section', 2)->first();
+    $course3 = Course::where('section', 3)->first();
+    $course4 = Course::where('section', 4)->first();
+    $course5 = Course::where('section', 5)->first();
+
+    return view('welcome', compact('principal_slider', 'promotions', 'events', 'course1', 'course2', 'course3', 'course4', 'course5'));
   }
 
   public function about_us() {
@@ -47,8 +53,8 @@ class PagesController extends Controller
   }
 
   public function events(){
-    $events = Blog::where('type', 1)->orderBy('priority')->paginate(3);
-    $news = Blog::where('type', 2)->orderBy('priority')->paginate(3);
+    $events = Blog::where('type', 1)->orderBy('priority')->paginate(3, ['*'], 'pagina-eventos');
+    $news = Blog::where('type', 2)->orderBy('priority')->paginate(3, ['*'], 'pagina-nticias');
     return view('site.pages.events', compact('events', 'news'));
   }
 
@@ -61,4 +67,14 @@ class PagesController extends Controller
     $courses = Course::where('status', 1)->get();
     return view('site.pages.contact', compact('courses'));
   }
+
+  public function methodology(){
+    return view('site.pages.methodology');
+  }
+
+  public function course_detail($id){
+    $course = Course::find($id);
+    return view('site.pages.course_detail', compact('course'));
+  }
+
 }

@@ -29,12 +29,12 @@
             <div class="form-group">
               <label for="type">Tipo</label>
               <select class="form-control {{ $errors->has('type') ? 'is-invalid' : '' }}" name="type" placeholder="Seleccionar tipo">
-                <option value="1" @if($document->type == "1") }}) {{'selected'}} @endif>Audio</option>
-                <option value="2" @if($document->type == "2") }}) {{'selected'}} @endif>PDF</option>
-                <option value="3" @if($document->type == "3") }}) {{'selected'}} @endif>Video</option>
-                <option value="4" @if($document->type == "4") }}) {{'selected'}} @endif>Word</option>
-                <option value="5" @if($document->type == "5") }}) {{'selected'}} @endif>Zip</option>
-                <option value="6" @if($document->type == "6") }}) {{'selected'}} @endif>Otro</option>
+                <option value="1" @if($document->type == "1") {{'selected'}} @endif>Audio</option>
+                <option value="2" @if($document->type == "2") {{'selected'}} @endif>PDF</option>
+                <option value="3" @if($document->type == "3") {{'selected'}} @endif>Video</option>
+                <option value="4" @if($document->type == "4") {{'selected'}} @endif>Word</option>
+                <option value="5" @if($document->type == "5") {{'selected'}} @endif>Zip</option>
+                <option value="6" @if($document->type == "6") {{'selected'}} @endif>Otro</option>
               </select>
               @if ($errors->has('type'))
                 <span class="invalid-feedback" role="alert">

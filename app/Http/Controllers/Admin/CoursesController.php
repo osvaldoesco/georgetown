@@ -31,11 +31,13 @@ class CoursesController extends Controller
       'title' => $request->title,
       'description' => $request->description,
       'short_description' => $request->short_description,
+      'section' => $request->section,
+      'section_title' => $request->section_title,
       'status' => $request->has('status') ? $request->status : '1',
       'priority' => $request->priority,
       'image' => $path.$imageName,
     ]);
-      return redirect()->route('courses.index')->with('success','Item alojado con exito');
+    return redirect()->route('courses.index')->with('success','Item alojado con exito');
   }
 
   
@@ -74,6 +76,8 @@ class CoursesController extends Controller
       $course->description = $request->description;
       $course->status = $request->has('status') ? $request->status : '1';
       $course->priority = $request->priority;
+      $course->section = $request->section;
+      $course->section_title = $request->section_title;
       if($request->image){
         $path = 'storage/images/courses/';
         $imageName = time().'.'.request()->image->getClientOriginalExtension();

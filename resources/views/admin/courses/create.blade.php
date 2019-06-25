@@ -16,6 +16,21 @@
               <input type="text" class="form-control" placeholder="..." name="short_description">
             </div>
             <div class="form-group">
+              <label for="name">Sección:</label>
+              <select class="form-control" placeholder="..." name="section">
+                <option value="0">Sin sección</option>
+                <option value="1">Sección 1</option>
+                <option value="2">Sección 2</option>
+                <option value="3">Sección 3</option>
+                <option value="4">Sección 4</option>
+                <option value="5">Kids</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="name">Título de sección:</label>
+              <input type="text" class="form-control" placeholder="..." name="section_title">
+            </div>
+            <div class="form-group">
               <label for="name">Descripción</label>
               <textarea class="form-control" placeholder="..." name="description"></textarea>
             </div>

@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="padding-vertical-20 blog-pagination-cont">
-      {{ $events->render() }}
+      {{ $events->appends(request()->input())->links() }}
     </div>
     <h3 class="title-decorated">
       NOTICIAS
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="padding-vertical-20 blog-pagination-cont">
-      {{ $news->render() }}
+      {{ $news->appends(request()->input())->links() }}
     </div>
   </section>
 @endsection

@@ -10,14 +10,18 @@
         <div class="row">
           <div class="col-md-5 offset-md-1">
             <div class="course__img">
-            <img alt="{{ $course->title }}" src="{{ asset($course->image) }}" />
+              <a href="{{route('pages.course_detail', $course->id) }}">
+                <img alt="{{ $course->title }}" src="{{ asset($course->image) }}" />
+              </a>
             </div>
           </div>
           <div class="col-md-5 vertical-center">
             <div class="course__description">
-              <h3 class="title-decorated padding-vertical">
-                <span>{{ $course->title }}</span>
-              </h3>
+              <a href="{{route('pages.course_detail', $course->id) }}">
+                <h3 class="title-decorated padding-vertical">
+                  <span>{{ $course->title }}</span>
+                </h3>
+              </a>
               <p class="normal-text">
                 {{ $course->description }}
               </p>

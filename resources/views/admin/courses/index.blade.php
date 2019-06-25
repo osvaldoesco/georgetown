@@ -47,6 +47,8 @@
                 <th scope="col">#</th>
                 <th scope="col">Título</th>
                 <th scope="col">Descripción</th>
+                <th scope="col">Sección</th>
+                <th scope="col">Estado</th>
                 <th scope="col">Imagen</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Borrar</th>
@@ -57,7 +59,11 @@
                 <tr>
                   <th scope="row">{{ $key + 1 }}</th>
                   <td>{{ $course->title }}</td>
-                  <td>{{ $course->short_description }}</td>
+                  <td>{{ $course->limitatedDesc() }}</td>
+                  <td> {{ $course->getCourseName() }} </td>
+                  <td>
+                    {{ ($course->status == 1) ? 'Activo' : 'Inactivo' }}
+                  </td>
                   <td>
                     <img src="{{ asset($course->image) }}" alt="{{ $course->title }}" class="admin-img-preview" />
                   </td>

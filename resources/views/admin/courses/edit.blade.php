@@ -27,6 +27,21 @@
               @endif
             </div>
             <div class="form-group">
+              <label for="name">Sección:</label>
+              <select class="form-control" placeholder="..." name="section">
+                <option value="0" @if($course->section == "0") {{'selected'}} @endif>Sin sección</option>
+                <option value="1" @if($course->section == "1") {{'selected'}} @endif>Sección 1</option>
+                <option value="2" @if($course->section == "2") {{'selected'}} @endif>Sección 2</option>
+                <option value="3" @if($course->section == "3") {{'selected'}} @endif>Sección 3</option>
+                <option value="4" @if($course->section == "4") {{'selected'}} @endif>Sección 4</option>
+                <option value="5" @if($course->section == "5") {{'selected'}} @endif>Kids</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="name">Título de sección:</label>
+              <input type="text" class="form-control" placeholder="..." name="section_title" value="{{ old('title', $course->section_title) }}">
+            </div>
+            <div class="form-group">
               <label for="name">Descripción</label>
               <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" placeholder="..." name="description">{{ old('description', $course->description) }}</textarea>
               @if ($errors->has('description'))

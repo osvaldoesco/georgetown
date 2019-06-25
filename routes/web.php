@@ -23,6 +23,8 @@ Route::get('/cursos','PagesController@courses')->name('pages.courses');
 Route::get('/contacto', 'PagesController@contact')->name('pages.contact');
 
 Route::get('/quienes-somos', 'PagesController@about_us')->name('pages.about_us');
+Route::get('/metodologia', 'PagesController@methodology')->name('pages.methodology');
+
 
 Route::get('/gt_login', function(){
   return view('site.pages.login');
@@ -30,6 +32,7 @@ Route::get('/gt_login', function(){
 
 Route::get('/eventos-y-noticias', 'PagesController@events')->name('pages.events');
 Route::get('/eventos-y-noticias/{slug}','PagesController@showBlog')->name('pages.blog_detail');
+Route::get('/cursos/{id}','PagesController@course_detail')->name('pages.course_detail');
 
 Route::get('/servicios', function () {
   return view('site.services');
