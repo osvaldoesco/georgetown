@@ -16720,9 +16720,6 @@ readers do not read off random characters that represent icons */
 
 body {
   font-family: "Lato", sans-serif;
-}
-
-.site-body {
   padding-top: 100px;
 }
 
