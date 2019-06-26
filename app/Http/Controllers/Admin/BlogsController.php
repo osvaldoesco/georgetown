@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Blog;
 use Validator;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -51,6 +52,7 @@ class BlogsController extends Controller
       'priority' => $request->priority,
       'image' => $path.$imageName,
       'small_image' => $path.$smallImageName,
+      'programmed_date' => Carbon::createFromFormat('m/d/Y', $request->programmed_date),
     ]);
     return redirect()->route('blogs.index')->with('success','Item alojado con exito');
   }
@@ -83,14 +85,14 @@ class BlogsController extends Controller
     if ($validator->fails()) {
       return redirect()->route('blogs.edit', $id)->withErrors($validator)->withInput();
     }
-
-    try {
+    // try {
       $blog = Blog::find($id);
       $blog->title = $request->title;
       $blog->short_description = $request->short_description;
       $blog->description = $request->description;
       $blog->status = $request->has('status') ? $request->status : '1';
       $blog->type = $request->type;
+      $blog->programmed_date = Carbon::createFromFormat('Y-m-d', $request->programmed_date);
       $blog->priority = $request->priority;
       if($request->image){
         $path = 'storage/images/blogs/';
@@ -109,9 +111,9 @@ class BlogsController extends Controller
       } else {
         return redirect()->route('blogs.index')->with('error', 'Ocurrio un error al editar');
       }
-    } catch (\Exception $e) {
-      return redirect()->route('blogs.index')->with('error', 'Ocurrio un error al editar');
-    }
+    // } catch (\Exception $e) {
+    //   return redirect()->route('blogs.index')->with('error', 'Ocurrio un error al editar');
+    // }
   }
 
   

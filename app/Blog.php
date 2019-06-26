@@ -2,11 +2,12 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Blog extends Model
 {
-  protected $fillable = ['title', 'image', 'short_description', 'description', 'status', 'prioririty', 'type', 'slug', 'small_image', 'status'];
+  protected $fillable = ['title', 'image', 'short_description', 'description', 'status', 'prioririty', 'type', 'slug', 'small_image', 'status', 'programmed_date'];
 
   public function limitatedDesc(){
     return substr($this->short_description, 0, 50) . '...';
@@ -17,7 +18,9 @@ class Blog extends Model
   }
 
   public function getFormatedDate(){
-    return date("d/m/Y", strtotime($this->created_at));;
+    if($this->programmed_date){
+      return date('d/m/Y', strtotime($this->programmed_date));
+    }
+    return '';
   }
-  
 }

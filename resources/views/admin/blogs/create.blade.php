@@ -39,6 +39,10 @@
               <select>
             </div>
             <div class="form-group">
+              <label for="name">Fecha:</label>
+              <input type="date" class="date-picker form-control" id="programmed_date" name="programmed_date">
+            </div>
+            <div class="form-group">
               <img src="#" alt="image1" class="preview-image-form d-none" id="target"/>
             </div>
             <div class="custom-file">

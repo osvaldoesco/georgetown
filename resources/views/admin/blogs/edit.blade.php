@@ -55,6 +55,10 @@
               @endif
             </div>
             <div class="form-group">
+              <label for="name">Fecha:</label>
+            <input type="date" class="date-picker form-control" id="programmed_date" name="programmed_date" value="{{ $blog->programmed_date }}">
+            </div>
+            <div class="form-group">
               @if($blog->image)
                 <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }}" class="preview-image-form" id="target"/>
               @endif
