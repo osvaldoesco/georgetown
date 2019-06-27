@@ -61,7 +61,7 @@ class AboutSlidersController extends Controller
     if ($about_slider) {
       return view('admin.about_sliders.edit', compact('about_slider'));
     }else {
-      return redirect()->route('about_sliders.index')->with('error', 'Item no encontrado');;
+      return redirect()->route('about_sliders.index')->with('error', 'Item no encontrado');
     } 
   }
 

@@ -26,6 +26,6 @@ class MailsController extends Controller
       $message->cc($cc_email);
       $message->from($from_email, 'GeorgeTown');
     });
-    return redirect('/');
+    return redirect('/')->with('success','Item alojado con exito');
   }
 }

@@ -267,4 +267,9 @@
       </button>
     </a>
   </section>
+  @if (session()->has('success'))
+    <script>
+      alert("Mensaje enviado, nos pondremos en contacto contigo!");
+    </script>
+  @endif
 @endsection
