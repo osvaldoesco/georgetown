@@ -76,8 +76,9 @@
             <li>
               <a href="{{ route('users.index') }}">Usuarios</a>
             </li>
-            
-
+            <li>
+              <a href="{{ route('schedules.index') }}">Horarios</a>
+            </li>
           </ul>
         </nav>
         <div id="content">

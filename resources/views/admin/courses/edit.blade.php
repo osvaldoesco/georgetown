@@ -18,15 +18,6 @@
               @endif
             </div>
             <div class="form-group">
-              <label for="name">Pequeña descripción</label>
-              <input type="text" class="form-control {{ $errors->has('short_description') ? 'is-invalid' : '' }}" placeholder="..." name="short_description" value='{{ old('short_description', $course->short_description) }}'>
-              @if ($errors->has('short_description'))
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $errors->first('short_description') }}</strong>
-                </span>
-              @endif
-            </div>
-            <div class="form-group">
               <label for="name">Sección:</label>
               <select class="form-control" placeholder="..." name="section">
                 <option value="0" @if($course->section == "0") {{'selected'}} @endif>Sin sección</option>
@@ -38,12 +29,25 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="name">Título de sección:</label>
+              <label for="name">Título de sección(Página de inicio):</label>
               <input type="text" class="form-control" placeholder="..." name="section_title" value="{{ old('title', $course->section_title) }}">
             </div>
             <div class="form-group">
+              <label for="name">Descripción de sección(Lista de cursos):</label>
+              <input type="text" class="form-control" placeholder="..." name="section_description" value="{{ old('section_description', $course->section_description) }}">
+            </div>
+            <div class="form-group">
+              <label for="name">Pequeña descripción(Página de detalle):</label>
+              <input type="text" class="form-control {{ $errors->has('short_description') ? 'is-invalid' : '' }}" placeholder="..." name="short_description" value='{{ old('short_description', $course->short_description) }}'>
+              @if ($errors->has('short_description'))
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $errors->first('short_description') }}</strong>
+                </span>
+              @endif
+            </div>
+            <div class="form-group">
               <label for="name">Descripción</label>
-              <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" placeholder="..." name="description">{{ old('description', $course->description) }}</textarea>
+              <textarea class="form-control html-editor normal-text {{ $errors->has('description') ? 'is-invalid' : '' }}" placeholder="..." name="description">{{ old('description', $course->description) }}</textarea>
               @if ($errors->has('description'))
                 <span class="invalid-feedback" role="alert">
                   <strong>{{ $errors->first('description') }}</strong>
@@ -95,6 +99,25 @@
         //replace the "Choose a file" label
         $(this).next('.custom-file-label').html(fileName);
       })
+
+      $('#sn-description,.html-editor').summernote({
+        rows: 5,
+        placeholder: 'Escribe aquí',
+        colors: [
+            ['#476fb3', '#49dfc7', '#cccccc', '#ffeec7', '#ff1751','#ffffff', '#000000', '#c0392b'], //first line of colors
+            ['#808080', '#ffffff', '#cecece', '#BDBDBD', 'red', 'blue', 'yellow', 'orange'] //second line of colors
+        ],
+        toolbar: [
+          [ 'style', [ 'style' ] ],
+          [ 'font', [ 'bold', 'italic', 'underline', 'strikethrough'] ],
+          [ 'fontname', [ 'fontname' ] ],
+          [ 'fontsize', [ 'fontsize' ] ],
+          [ 'color', [ 'color' ] ],
+          [ 'para', [ 'ol', 'ul', 'paragraph'] ],
+          [ 'table', [ 'table' ] ],
+          [ 'insert', [ 'link'] ],
+          [ 'view', [ 'undo', 'codeview'] ]
+      ]});
     });
 
     function showImage(src, target) {

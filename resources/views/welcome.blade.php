@@ -54,7 +54,6 @@
         </h3>
         <div class="container padding-vertical">
             <div class="row">
-
               <div class="col-12 col-md-6 col-lg-3 square col-p-10 services-cont">
                 <div class="services-block">
                   <img alt="decorate" src="{{ asset('img/course-decoration2.png') }}" class="course-decoration" />
@@ -63,7 +62,7 @@
                       <a href="{{route('pages.course_detail', $course1->id) }}">{{ $course1->section_title }}</a>
                     </h4>
                     <p class="box-text">
-                      {{ $course1->short_description }}
+                      {{ $course1->section_description }}
                     </p>
                     <a href="{{route('pages.course_detail', $course1->id) }}">
                       <i class="fas fa-arrow-right"></i>
@@ -92,7 +91,7 @@
                       <a href="{{route('pages.course_detail', $course2->id) }}">{{ $course2->section_title }}</a>
                     </h4>
                     <p class="box-text">
-                      {{ $course2->short_description }}
+                      {{ $course2->section_description }}
                     </p>
                     <a href="{{route('pages.course_detail', $course2->id) }}">
                       <i class="fas fa-arrow-right"></i>
@@ -121,7 +120,7 @@
                       <a href="{{route('pages.course_detail', $course3->id) }}">{{ $course3->section_title }}</a>
                     </h4>
                     <p class="box-text">
-                      {{ $course3->short_description }}
+                      {{ $course3->section_description }}
                     </p>
                     <a href="{{route('pages.course_detail', $course3->id) }}">
                       <i class="fas fa-arrow-right"></i>
@@ -146,11 +145,11 @@
                 <div class="services-block--yellow">
                   <img alt="decorate" src="{{ asset('img/course-decoration.png') }}" class="course-decoration" />
                   @if($course4)
-                    <h4 class="box-title">
+                    <h4 class="box-title gray-title-i">
                       <a href="{{route('pages.course_detail', $course4->id) }}">{{ $course4->section_title }}</a>
                     </h4>
                     <p class="box-text">
-                      {{ $course4->short_description }}
+                      {{ $course4->section_description }}
                     </p>
                     <a href="{{route('pages.course_detail', $course4->id) }}">
                       <i class="fas fa-arrow-right"></i>

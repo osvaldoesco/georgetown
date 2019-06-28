@@ -33,6 +33,7 @@ class CoursesController extends Controller
       'short_description' => $request->short_description,
       'section' => $request->section,
       'section_title' => $request->section_title,
+      'section_description' => $request->section_description,
       'status' => $request->has('status') ? $request->status : '1',
       'priority' => $request->priority,
       'image' => $path.$imageName,
@@ -77,6 +78,7 @@ class CoursesController extends Controller
       $course->status = $request->has('status') ? $request->status : '1';
       $course->priority = $request->priority;
       $course->section = $request->section;
+      $course->section_description = $request->section_description;
       $course->section_title = $request->section_title;
       if($request->image){
         $path = 'storage/images/courses/';

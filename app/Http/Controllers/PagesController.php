@@ -10,6 +10,7 @@ use App\PrincipalSlider;
 use App\Promotion;
 use App\Course;
 use App\AboutSlider;
+use App\Schedule;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -75,6 +76,13 @@ class PagesController extends Controller
   public function course_detail($id){
     $course = Course::find($id);
     return view('site.pages.course_detail', compact('course'));
+  }
+
+  public function schedules(){
+    $weekly = Schedule::where('type', 1)->orderBy('priority', 'ASC')->get();
+    $saturday = Schedule::where('type', 2)->orderBy('priority', 'ASC')->get();
+    $sunday = Schedule::where('type', 3)->orderBy('priority', 'ASC')->get();
+    return view('site.pages.schedules', compact('weekly', 'saturday', 'sunday'));
   }
 
 }

@@ -13,17 +13,24 @@
         <div class="row">
           <div class="col-12 text-center">
             <h4 class="title-blue title-margin">CURSOS TOEFL (IBT & ITP), TOEIC, SAT, GRAMMAR.</h4>
-            <p class="title-gray title-margin">CLASES DÍAS SÁBADO.</p>
-            <p class="text-schedule title-margin">06:30 a.m - 08:00 a.m</p>
-            <p class="text-schedule title-margin">08:30 a.m - 10:00 a.m</p>
-            <p class="text-schedule title-margin">10:10 a.m - 11:40 a.m</p>
-            <p class="text-schedule title-margin">01:00 p.m - 02:30 p.m</p>
-            <p class="text-schedule title-margin">02:40 p.m - 04:10 p.m</p>
-            <p class="text-schedule title-margin">04:20 p.m - 05:50 p.m</p>
-            <p class="text-schedule title-margin">06:00 p.m - 07:30 p.m</p>
-            <p class="title-gray title-margin">CLASES DÍAS SÁBADO.</p>
-            <p class="text-schedule title-margin">8:30 a.m - 11:30 a.m</p>
-            <p class="text-schedule title-margin">12:00 m.d - 03:00 p.m</p>
+            @if(count($weekly) > 0)
+              <p class="title-gray title-margin">CLASES DÍAS DE SEMANA.</p>
+              @foreach($weekly as $schedule)
+                <p class="text-schedule title-margin">{{$schedule->start}} - {{$schedule->end}}</p>
+              @endforeach
+            @endif
+            @if(count($saturday) > 0)
+              <p class="title-gray title-margin">CLASES DÍAS SÁBADO.</p>
+              @foreach($saturday as $schedule)
+                <p class="text-schedule title-margin">{{$schedule->start}} - {{$schedule->end}}</p>
+              @endforeach
+            @endif
+            @if(count($sunday) > 0)
+              <p class="title-gray title-margin">CLASES DÍAS DOMINGO.</p>
+              @foreach($sunday as $schedule)
+                <p class="text-schedule title-margin">{{$schedule->start}} - {{$schedule->end}}</p>
+              @endforeach
+            @endif
           </div>
         </div>
         <div class="row">

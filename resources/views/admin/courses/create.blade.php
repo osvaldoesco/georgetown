@@ -12,10 +12,6 @@
               <input type="text" class="form-control" placeholder="Título" name="title">
             </div>
             <div class="form-group">
-              <label for="name">Pequeña descripción</label>
-              <input type="text" class="form-control" placeholder="..." name="short_description">
-            </div>
-            <div class="form-group">
               <label for="name">Sección:</label>
               <select class="form-control" placeholder="..." name="section">
                 <option value="0">Sin sección</option>
@@ -31,8 +27,16 @@
               <input type="text" class="form-control" placeholder="..." name="section_title">
             </div>
             <div class="form-group">
-              <label for="name">Descripción</label>
-              <textarea class="form-control" placeholder="..." name="description"></textarea>
+              <label for="name">Descripción de sección(Página de inicio):</label>
+              <input type="text" class="form-control" placeholder="..." name="section_description">
+            </div>
+            <div class="form-group">
+              <label for="name">Pequeña descripción(Lista de cursos):</label>
+              <input type="text" class="form-control" placeholder="..." name="short_description">
+            </div>
+            <div class="form-group">
+              <label for="name">Descripción(Página de detalle):</label>
+              <textarea class="form-control html-editor normal-text" placeholder="..." name="description"></textarea>
             </div>
             <div class="form-group">
               <img src="#" alt="image1" class="preview-image-form d-none"  id="target"/>
@@ -66,7 +70,27 @@
         var fileName = $(this).val();
         //replace the "Choose a file" label
         $(this).next('.custom-file-label').html(fileName);
-      })
+      });
+
+      $('#sn-description,.html-editor').summernote({
+        rows: 5,
+        placeholder: 'Escribe aquí',
+        colors: [
+            ['#476fb3', '#49dfc7', '#cccccc', '#ffeec7', '#ff1751','#ffffff', '#000000', '#c0392b'], //first line of colors
+            ['#808080', '#ffffff', '#cecece', '#BDBDBD', 'red', 'blue', 'yellow', 'orange'] //second line of colors
+        ],
+        toolbar: [
+          [ 'style', [ 'style' ] ],
+          [ 'font', [ 'bold', 'italic', 'underline', 'strikethrough'] ],
+          [ 'fontname', [ 'fontname' ] ],
+          [ 'fontsize', [ 'fontsize' ] ],
+          [ 'color', [ 'color' ] ],
+          [ 'para', [ 'ol', 'ul', 'paragraph'] ],
+          [ 'table', [ 'table' ] ],
+          [ 'insert', [ 'link'] ],
+          [ 'view', [ 'undo', 'codeview'] ]
+      ]});
+
     });
     function showImage(src, target) {
       var fr = new FileReader();
@@ -81,6 +105,8 @@
       var target = document.getElementById("target");
       target.classList.remove('d-none');
       showImage(src, target);
+      
     }
+    
   </script>   
 @endsection

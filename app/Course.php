@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-  protected $fillable = ['title', 'image', 'short_description', 'description', 'status', 'priority', 'section', 'section_title'];
+  protected $fillable = ['title', 'image', 'section_description', 'short_description', 'description', 'status', 'priority', 'section', 'section_title'];
 
   public function documents(){
     return $this->hasMany('App\Document');

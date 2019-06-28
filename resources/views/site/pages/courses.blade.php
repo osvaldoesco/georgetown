@@ -23,7 +23,7 @@
                 </h3>
               </a>
               <p class="normal-text">
-                {{ $course->description }}
+                {{ $course->short_description }}
               </p>
             </div>
           </div>

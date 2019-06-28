@@ -18090,3 +18090,14 @@ footer {
   box-shadow: 10px 10px 10px #cccccc;
 }
 
+.gray-title-i {
+  color: #808080 !important;
+}
+
+.gray-title-i a,
+.gray-title-i a:visited,
+.gray-title-i a:active,
+.gray-title-i a:hover {
+  color: #808080 !important;
+}
+

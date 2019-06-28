@@ -14,9 +14,7 @@
 // Pages
 Route::get('/','PagesController@home');
 
-Route::get('/horarios', function () {
-  return view('site.pages.schedules');
-})->name('pages.schedules');
+Route::get('/horarios', 'PagesController@schedules')->name('pages.schedules');
 
 Route::get('/cursos','PagesController@courses')->name('pages.courses');
 
@@ -61,6 +59,7 @@ Route::group(['prefix' => 'gt_admin', 'middleware' => ['auth', 'admin']], functi
   Route::resource('users', 'Admin\UsersController');
   Route::resource('about_sliders', 'Admin\AboutSlidersController');
   Route::resource('blogs', 'Admin\BlogsController');
+  Route::resource('schedules', 'Admin\SchedulesController');
   Route::get('/users/{id}/change_password', 'Admin\UsersController@newPassword')->name('users.new_password');
   Route::post('/users/{id}/change_password', 'Admin\UsersController@updatePassword')->name('users.update_password');  
 });
