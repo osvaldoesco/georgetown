@@ -18101,3 +18101,54 @@ footer {
   color: #808080 !important;
 }
 
+.gt-message {
+  background-color: #476fb3;
+  position: fixed;
+  left: 70px;
+  top: 70px;
+  box-shadow: 1px 1px 10px #000;
+  z-index: 1000;
+  display: none;
+  border-bottom: 4px solid #49dfc7;
+  color: white;
+}
+
+.gt-message__content {
+  padding: 60px 50px;
+  position: relative;
+}
+
+.gt-message .course-decoration {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0.8;
+  width: 40px;
+}
+
+.gt-message .gt-exit {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  opacity: 0.8;
+  color: #e6e6e6;
+}
+
+.gt-message .gt-exit:hover {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  opacity: 0.8;
+  color: white;
+  cursor: pointer;
+}
+
+.courses_see-more {
+  color: #476fb3;
+  font-size: 14px;
+}
+
+.courses_see-more:hover {
+  color: #ff1751;
+}
+

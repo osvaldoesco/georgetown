@@ -147,5 +147,6 @@
 
     <script src="{{ asset('js/app.js')}}"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    @yield('scripts-welcome')
   </body>
 </html>

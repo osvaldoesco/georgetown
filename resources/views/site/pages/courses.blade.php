@@ -19,7 +19,7 @@
             <div class="course__description">
               <a href="{{route('pages.course_detail', $course->id) }}">
                 <h3 class="title-decorated padding-vertical">
-                  <span>{{ $course->title }}</span>
+                  <span>{{ $course->title }}</span><span class="courses_see-more">{{' '}}ver más</span>
                 </h3>
               </a>
               <p class="normal-text">

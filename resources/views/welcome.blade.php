@@ -2,6 +2,16 @@
 
 @section('content')
   <div class="home-page">
+    @if (session()->has('success'))
+      <div class="gt-message">
+        <div class="gt-message__content">
+          <i class="fas fa-times gt-exit"></i>
+          <h3>Mensaje enviado correctamente!</h3>
+          <p>Nos pondremos en contacto contigo!</p>
+          <img alt="decorate" src="{{ asset('img/course-decoration2.png') }}" class="course-decoration" />
+        </div>
+      </div>
+    @endif
     <div class="home__slider visible-desktop">
       @foreach ($principal_slider as $item)
         <div class="slide-item">
@@ -266,9 +276,18 @@
       </button>
     </a>
   </section>
-  @if (session()->has('success'))
-    <script>
-      alert("Mensaje enviado, nos pondremos en contacto contigo!");
-    </script>
-  @endif
 @endsection
+
+@if (session()->has('success'))
+  @section('scripts-welcome')
+    <script>
+      $('.gt-message').fadeIn(300);
+      setTimeout(function(){
+        $('.gt-message').fadeOut(300);
+      }, 5000);
+      $('.gt-exit').click(function(){
+        $('.gt-message').fadeOut(300);
+      });
+    </script>
+  @endsection
+@endif
