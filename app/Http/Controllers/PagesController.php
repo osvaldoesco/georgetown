@@ -66,7 +66,8 @@ class PagesController extends Controller
   }
   public function contact(){
     $courses = Course::where('status', 1)->get();
-    return view('site.pages.contact', compact('courses'));
+    $mapKey = env('MAP_KEY');
+    return view('site.pages.contact', compact('courses', 'mapKey'));
   }
 
   public function methodology(){
