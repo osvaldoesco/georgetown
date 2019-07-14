@@ -38,7 +38,7 @@ class DocumentsController extends Controller
       return redirect()->route('document.create', $id)->withErrors($validator)->withInput();
     }
 
-    try {
+    // try {
       $path = 'storage/documents/';
       $fileName = request()->file->getClientOriginalName();
       request()->file->move(public_path($path), $fileName);
@@ -53,9 +53,9 @@ class DocumentsController extends Controller
         'priority' => $request->priority,
         'file' => $path.$fileName,
       ]);
-    } catch (\Exception $e) {
-      return redirect()->route('documents.index')->with('error', 'Ocurrio un error al agregar documento');
-    }
+    // } catch (\Exception $e) {
+    //   return redirect()->route('documents.index')->with('error', 'Ocurrio un error al agregar documento');
+    // }
     return redirect()->route('documents.index')->with('success','Item alojado con exito');
   }
 
