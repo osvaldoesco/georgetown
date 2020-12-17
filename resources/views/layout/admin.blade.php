@@ -79,6 +79,9 @@
             <li>
               <a href="{{ route('schedules.index') }}">Horarios</a>
             </li>
+            <li>
+              <a href="{{ route('products.index') }}">Tienda</a>
+            </li>
           </ul>
         </nav>
         <div id="content">

@@ -40,7 +40,7 @@
                   <a class="nav-item nav-link {{ $page == 'schedules' ? 'active' : ''}}" href="{{ route('pages.schedules') }}">Horarios</a>
                   <a class="nav-item nav-link {{ $page == 'courses' ? 'active' : ''}}" href="{{ route('pages.courses') }}">Cursos</a>
                   <a class="nav-item nav-link {{ $page == 'events' ? 'active' : ''}}" href="{{ route('pages.events') }}">Eventos y noticias</a>
-                  <a class="nav-item nav-link store-link {{ $page == 'store' ? 'active' : ''}}" href="{{ route('pages.store') }}">Tienda <i class="fas fa-shopping-cart"></i> </a>
+                  <a class="nav-item nav-link {{ $page == 'store' ? 'active' : ''}}" href="{{ route('pages.store') }}">Tienda <i class="fas fa-shopping-cart"></i></a>
                   <a class="nav-item nav-link {{ $page == 'contact' ? 'active' : ''}}" href="{{ route('pages.contact') }}">Contáctenos</a>
                   @if (Auth::check())
                     <a class="nav-item nav-link {{ $page == 'documents' ? 'active' : ''}}" href="/documents">Material de apoyo</a>
@@ -74,76 +74,8 @@
         </div>
       </div>
     </header>
-    <div class="content decoration-page">
-      <img alt="decoration" class="footer-decoration visible-desktop" src="{{ asset('img/footer-decoration.png') }}">
-      <img
-        alt="decoration-mobile"
-        class="footer-decoration-mb visible-mobile"
-        src="{{ asset('img/footer-decoration-mb.png') }}">
+    <div class="content store-full-height">
       @yield('content')
-    </div>
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-2 text-center text-lg-left">
-            <img alt="logo" id="footer__logo" src="{{ asset('img/logo-footer.jpg')}}" />
-          </div>
-          <div class="col-12 col-lg-8 text-center">
-            <div class="footer__menu">
-              <div><a href="{{ route('pages.about_us') }}">¿Quienes somos?</a></div>
-              <div><a href="{{route('pages.courses') }}">Nuestros servicios</a></div>
-            <div><a href="{{ route('pages.events') }}">Eventos y Noticias</a></div>
-              <div><a href="{{ route('pages.contact') }}">Contáctanos</a></div>
-              <div class="div-clear-mb"></div>
-            </div>
-            <p class="footer__address">
-              Centro comercial loma linda local #31D, <b>San Salvador</b>
-              <span> +(503) 2231 -1790 / 7680 - 5577</span>
-            </p>
-          </div>
-          <div class="col-12 col-lg-2 text-right">
-            <ul class="footer__social">
-              <li class="social-item social-insta">
-                <a href="https://www.instagram.com/georgetown.english/?hl=es-la" target="_blank">
-                  <img alt="insta" src="{{ asset('img/insta.png')}}" />
-                </a>
-              </li>
-              <li class="social-item social-fb">
-                <a href="https://www.facebook.com/Georgetown-English-Academy-351189995515981/" target="_blank">
-                  <img alt="fb" src="{{ asset('img/fb.png')}}" />
-                </a>
-              </li>
-              <li class="social-item social-mail">
-                <a href="mailto:info@GeorgeTownENGLISH.com" target="_blank">
-                  <img alt="mail" src="{{ asset('img/mail.png')}}" />
-                </a>
-              </li>
-            <ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Floating social netwoks -->
-    <div class="floating-social-networks d-none d-md-block">
-      <ul class="footer__social">
-        <li class="social-item social-insta">
-          <a href="https://www.instagram.com/georgetown.english/?hl=es-la" target="_blank">
-            <img alt="insta" src="{{ asset('img/insta.png')}}" />
-          </a>
-        </li>
-        <li class="social-item social-fb">
-          <a href="https://www.facebook.com/Georgetown-English-Academy-351189995515981/" target="_blank">
-            <img alt="fb" src="{{ asset('img/fb.png')}}" />
-          </a>
-        </li>
-        <li class="social-item social-mail">
-          <a href="mailto:info@GeorgeTownENGLISH.com" target="_blank">
-            <img alt="mail" src="{{ asset('img/mail.png')}}" />
-          </a>
-        </li>
-      <ul>
     </div>
 
     <script src="{{ asset('js/app.js')}}"></script>

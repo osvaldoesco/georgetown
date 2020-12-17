@@ -11,6 +11,7 @@ use App\Promotion;
 use App\Course;
 use App\AboutSlider;
 use App\Schedule;
+use App\Product;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -84,6 +85,16 @@ class PagesController extends Controller
     $saturday = Schedule::where('type', 2)->orderBy('priority', 'ASC')->get();
     $sunday = Schedule::where('type', 3)->orderBy('priority', 'ASC')->get();
     return view('site.pages.schedules', compact('weekly', 'saturday', 'sunday'));
+  }
+
+  public function store(){
+    $products = Product::where('status', 1)->orderBy('priority', 'ASC')->paginate(2);
+    return view('site.pages.store', compact('products'));
+  }
+
+  public function product($id){
+    $product = Product::find($id);
+    return view('site.pages.product', compact('product'));
   }
 
 }
