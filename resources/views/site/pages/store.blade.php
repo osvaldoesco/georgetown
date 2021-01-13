@@ -6,7 +6,7 @@
       <div class="row">
         @foreach ($products as $product)
           <div class="col-12 col-lg-3">
-            <div class="events-box">
+            <div class="events-box mb-25">
               <a href="{{ route('pages.product', ['id' => $product->id]) }}">
                 <div class="product-image" style="background-image: url({{ asset($product->image) }});">
                 </div>
