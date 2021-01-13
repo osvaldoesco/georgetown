@@ -19,7 +19,7 @@
             <p class="price">${{ $product->price }}</p>
           @endif
           <div class="shop-container">
-            <a href="{{ $product->payment_link }}">
+            <a href="{{ $product->payment_link }}"  target="_blank">
               <button class="btn btn-primary btn-shop">Comprar</button>
             </a>
             <p class="redirect-message">Al dar clic se redireccionará a la página del Banco America Central.</p>

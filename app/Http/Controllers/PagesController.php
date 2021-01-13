@@ -88,7 +88,7 @@ class PagesController extends Controller
   }
 
   public function store(){
-    $products = Product::where('status', 1)->orderBy('priority', 'ASC')->paginate(2);
+    $products = Product::where('status', 1)->orderBy('priority', 'ASC')->paginate(12);
     return view('site.pages.store', compact('products'));
   }
 
