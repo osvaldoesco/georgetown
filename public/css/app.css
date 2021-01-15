@@ -18306,3 +18306,18 @@ footer {
   margin-bottom: 25px;
 }
 
+.product-image-xs {
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+}
+
+.products-container .events-box {
+  width: auto;
+  max-width: 100%;
+}
+
+.products-container .events__caption h4 {
+  height: 44px;
+}
+
